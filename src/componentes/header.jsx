@@ -9,7 +9,7 @@ const Header = (props) => {
                 <nav className="nav container" >
                     <a href="#" className="nav__logo" >Logo</a>
                     
-                    <div className="nav_menu" id="nav-menu" >
+                    <div className="nav__menu" id="nav-menu" >
                          <ul>
                             <li className="nav__item">
                                 <a href="#home" className="nav__link">
