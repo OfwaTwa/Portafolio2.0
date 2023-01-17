@@ -60,7 +60,7 @@ const Header = (props) => {
               </li>
               <li className="nav__item" onClick={()=> {openMenu()} } >
                 <a href="#contact" className="nav__link">
-                  <UilMessage size="1.2rem" /> Contac Me
+                  <UilMessage size="1.2rem" /> Contacme
                 </a>
               </li>
             </ul>
