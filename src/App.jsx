@@ -1,16 +1,12 @@
 import './App.css'
 import Header from "./componentes/Header"
-import Home from './componentes/Home'
-import Redes from './componentes/Main'
-import Profile from './componentes/Profile'
+import Main from './componentes/Main'
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      <Redes/>
-      <Profile/>
-      <Home/>
+      <Main/>
     </div>
   )
 };
