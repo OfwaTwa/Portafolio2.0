@@ -8,7 +8,10 @@ import {
   UilMessage,
   UilMouseAlt,
   UilArrowDown,
+  UilImport
 } from "@iconscout/react-unicons";
+import download from "../archivos/Curriculum.pdf";
+import image from "../imagenes/power.webp";
 
 const Main = (props) => {
   return (
@@ -68,7 +71,7 @@ const Main = (props) => {
           <span className="section__subtitle">My introduction</span>
 
           <div className="about__container container grid">
-            <img src="" alt="" className="about__img" />
+            <img src={image} alt="" className="about__img" />
 
             <div className="about__data">
               <p className="about__description">Web developer, with expensive knowledge and years of
@@ -89,6 +92,12 @@ const Main = (props) => {
                   <span className="about__info-title">05+</span>
                   <span className="about__info-name">Companies <br/> worked </span>
                 </div>
+              </div>
+
+              <div className="about__buttons">
+                <a download="" href={download} className="button button--flex">
+                  Download CV<UilImport className="button__icon"/>
+                </a>
               </div>
             </div>
           </div>          
