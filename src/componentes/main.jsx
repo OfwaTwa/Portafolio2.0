@@ -14,6 +14,9 @@ const Main = (props) => {
   return (
     <>
       <main className="main">
+        
+        {/* Home */}
+        
         <section className="home section" id="home">
           <div className="home__container container grid">
             <div className="home__content grid">
@@ -22,13 +25,13 @@ const Main = (props) => {
                   href="https://www.linkedin.com/in/steven-chamorro/"
                   target="_blank"
                 >
-                  <UilLinkedin />
+                  <UilLinkedin className="home__social-icon"/>
                 </a>
                 <a href="https://github.com/OfwaTwa" target="_blank">
-                  <UilGithub />
+                  <UilGithub className="home__social-icon"/>
                 </a>
                 <a href="" target="_blank">
-                  <UilLinkBroken />
+                  <UilLinkBroken className="home__social-icon"/>
                 </a>
               </div>
 
@@ -49,13 +52,46 @@ const Main = (props) => {
               </div>
             </div>
             <div className="home__scroll">
-              <a href="#about" className="home_scroll-button button--flex">
+              <a href="#about" className="home__scroll-button button--flex">
                 <UilMouseAlt size="2rem" className="home__scroll-mouse" />
-                <span className="home_scroll-name">Scroll down</span>
+                <span className="home__scroll-name">Scroll down</span>
                 <UilArrowDown size="1.25rem" className="home__scroll-arrow" />
               </a>
             </div>  
           </div>
+        </section>
+
+        {/* About */}
+
+        <section className="about section" id="about">
+          <h2 className="section__title">About Me</h2>
+          <span className="section__subtitle">My introduction</span>
+
+          <div className="about__container container grid">
+            <img src="" alt="" className="about__img" />
+
+            <div className="about__data">
+              <p className="about__description">Web developer, with expensive knowledge and years of
+                experience, working in web technologies and Ui / Ux design, delivering quality work. </p>
+              
+              <div className="about__info">
+                <div>
+                  <span className="about__info-title">08+</span>
+                  <span className="about__info-name">Years <br/> experience </span>
+                </div>
+
+                <div>
+                  <span className="about__info-title">+20</span>
+                  <span className="about__info-name">Completed <br/> project </span>
+                </div>
+                
+                <div>
+                  <span className="about__info-title">05+</span>
+                  <span className="about__info-name">Companies <br/> worked </span>
+                </div>
+              </div>
+            </div>
+          </div>          
         </section>
       </main>
     </>
