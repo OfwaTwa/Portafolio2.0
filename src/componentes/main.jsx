@@ -16,8 +16,19 @@ import {
 } from "@iconscout/react-unicons";
 import download from "../archivos/Curriculum.pdf";
 import image from "../imagenes/power.webp";
+import { useState } from "react";
 
 const Main = (props) => {
+  const [open, setOpen] = useState(false);
+
+  const onClick = () => {
+    if(open === false){
+      setOpen(true);
+    } else{
+      setOpen(false);
+    }
+  }
+
   return (
     <>
       <main className="main">
@@ -115,7 +126,7 @@ const Main = (props) => {
           <div className="skills__container container grid">
             <div>
               {/* Skills 1 */}
-              <div className="skills__content">
+              <div className="skills__content skills__open">
                 <div className="skills__header">
                   <UilBracketsCurly className="skills__icon"/>
                   <div>
@@ -168,7 +179,7 @@ const Main = (props) => {
                 </div>
               </div>
               {/* skills 2 */}
-              <div className="skills__content">
+              <div className="skills__content skills__close">
                 <div className="skills__header">
                   <UilServer className="skills__icon"/>
                   <div>
@@ -221,7 +232,7 @@ const Main = (props) => {
                 </div>
               </div>
               {/* skills 3 */}
-              <div className="skills__content">
+              <div className="skills__content skills__close">
                 <div className="skills__header">
                   <UilSwatchbook className="skills__icon"/>
                   <div>
