@@ -12,18 +12,25 @@ import {
   UilBracketsCurly,
   UilAngleDown,
   UilServer,
-  UilSwatchbook
+  UilSwatchbook,
+  UilGraduationCap,
+  UilSuitcaseAlt,
+  UilSchedule
 } from "@iconscout/react-unicons";
 import download from "../archivos/Curriculum.pdf";
 import image from "../imagenes/power.webp";
 import { useState } from "react";
 
 const Main = (props) => {
+  // Skills
   const [open1, setOpen1] = useState(false);
   const [open2, setOpen2] = useState(false);
   const [open3, setOpen3] = useState(false);
+  // Qualification
+  const [openEducation, setOpenEducation] = useState(true);
+  const [openWork, setOpenWork] = useState(false);
 
-  const onClick = (value) => {
+  const onClickSkills = (value) => {
     if(value === "open1" && open1 === false ){
       setOpen1(true);
       setOpen2(false);
@@ -40,6 +47,19 @@ const Main = (props) => {
       setOpen1(false);
       setOpen2(false);
       setOpen3(false);
+    }
+  }
+
+  const onClickQualification = (value) => {
+    if(value === "open1" && openEducation === false ){
+      setOpenEducation(true);
+      setOpenWork(false); 
+    } else if(value === "open2" && openWork === false){
+      setOpenEducation(false);
+      setOpenWork(true);
+    } else {
+      setOpenEducation(false);
+      setOpenWork(false);
     }
   }
 
@@ -141,7 +161,7 @@ const Main = (props) => {
             <div>
               {/* Skills 1 */}
               <div className={`skills__content ${open1 ? "skills__open" : "skills__close"}`}>
-                <div className="skills__header" onClick={()=>{onClick("open1")}} >
+                <div className="skills__header" onClick={()=>{onClickSkills("open1")}} >
                   <UilBracketsCurly className="skills__icon"/>  
                   <div> 
                     <h1 className="skills__titles">Frontend developer</h1>
@@ -194,7 +214,7 @@ const Main = (props) => {
               </div>
               {/* skills 2 */}
               <div className={`skills__content ${open2 ? "skills__open" : "skills__close"}`}>
-                <div className="skills__header" onClick={()=>{onClick("open2")}} >
+                <div className="skills__header" onClick={()=>{onClickSkills("open2")}} >
                   <UilServer className="skills__icon"/>
                   <div>
                     <h1 className="skills__titles">Frontend developer</h1>
@@ -247,7 +267,7 @@ const Main = (props) => {
               </div>
               {/* skills 3 */}
               <div className={`skills__content ${open3 ? "skills__open" : "skills__close"}`}>
-                <div className="skills__header" onClick={()=>{onClick("open3")}} >
+                <div className="skills__header" onClick={()=>{onClickSkills("open3")}} >
                   <UilSwatchbook className="skills__icon"/>
                   <div>
                     <h1 className="skills__titles">Designer</h1>
@@ -292,7 +312,172 @@ const Main = (props) => {
             </div>
           </div>
         </section>
+        {/* Qualification */}
+        <section className="qualification section">
+          <h2 className="section__title">Qualification</h2>
+          <span className="section__subtitle">My personal journey</span>
 
+          <div className="qualification__container container">
+            <div className="qualification__tabs">
+              <div className={`qualification__button button--flex ${openEducation ? "qualification__active" : null }`} data-target='#education' onClick={()=>{ onClickQualification("open1")}} >
+                <UilGraduationCap className="qualification__icon"/>
+                Education
+              </div>
+
+              <div className={`qualification__button button--flex ${openWork ? "qualification__active" : null }`} data-target='#work' onClick={()=>{ onClickQualification("open2")}}>
+                <UilSuitcaseAlt className="qualification__icon"/>
+                Work
+              </div>
+            </div>
+
+            <div className="qualification__sections">
+              {/* Qualification content 1 */}
+              <div className={`qualification__content ${openEducation ? "qualification__active"  : null}`} data-content id="education" >
+                {/* Qualification 1 */}
+                <div className="qualification__data">
+                  <div>
+                    <h3 className="qualification__title">Systems Engineer</h3>
+                    <span className="qualification__subtitle">Udenar - University</span>
+                    <div className="qualification__calendar">
+                      <UilSchedule/>
+                      2009 - 2014
+                    </div>
+                  </div>
+
+                  <div>
+                    <span className="qualification__rounder"></span>
+                    <span className="qualification__line"></span>
+                  </div>
+                </div>
+
+                {/* Qualification 2 */}
+                <div className="qualification__data">
+                  <div></div>
+
+                  <div>
+                    <span className="qualification__rounder"></span>
+                    <span className="qualification__line"></span>
+                  </div>
+
+                  <div>
+                    <h3 className="qualification__title">Web Desing</h3>
+                    <span className="qualification__subtitle">Spain - University</span>
+                    <div className="qualification__calendar">
+                      <UilSchedule/>
+                      2014 - 2017
+                    </div>
+                  </div>
+                </div>
+
+                {/* Qualification 3 */}
+                <div className="qualification__data">
+                  <div>
+                    <h3 className="qualification__title">Web development</h3>
+                    <span className="qualification__subtitle">Colombian - Institute</span>
+                    <div className="qualification__calendar">
+                      <UilSchedule/>
+                      2017 - 2019
+                    </div>
+                  </div>
+
+                  <div>
+                    <span className="qualification__rounder"></span>
+                    <span className="qualification__line"></span>
+                  </div>
+                </div>
+
+                {/* Qualification 4 */}
+                <div className="qualification__data">
+                  <div></div>
+
+                  <div>
+                    <span className="qualification__rounder"></span>
+                    {/* <span className="qualification__line"></span> */}
+                  </div>
+
+                  <div>
+                    <h3 className="qualification__title">Master in Ui/Ux</h3>
+                    <span className="qualification__subtitle">Colombian - Institute</span>
+                    <div className="qualification__calendar">
+                      <UilSchedule/>
+                      2019 - 2021
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Qualification content 2 */}
+              <div className={`qualification__content ${openWork ? "qualification__active"  : null}`} data-content id="work">
+                {/* Qualification 1 */}
+                <div className="qualification__data">
+                  <div>
+                    <h3 className="qualification__title">Software Enginner</h3>
+                    <span className="qualification__subtitle">Microsft - Colombian</span>
+                    <div className="qualification__calendar">
+                      <UilSchedule/>
+                      2016 - 2018
+                    </div>
+                  </div>
+
+                  <div>
+                    <span className="qualification__rounder"></span>
+                    <span className="qualification__line"></span>
+                  </div>
+                </div>
+
+                {/* Qualification 2 */}
+                <div className="qualification__data">
+                  <div></div>
+
+                  <div>
+                    <span className="qualification__rounder"></span>
+                    <span className="qualification__line"></span>
+                  </div>
+
+                  <div>
+                    <h3 className="qualification__title">Frontend developer</h3>
+                    <span className="qualification__subtitle">Apple Inc - Spain</span>
+                    <div className="qualification__calendar">
+                      <UilSchedule/>
+                      2018 - 2020
+                    </div>
+                  </div>
+                </div>
+
+                {/* Qualification 3 */}
+                <div className="qualification__data">
+                  <div>
+                    <h3 className="qualification__title">Ui Designer</h3>
+                    <span className="qualification__subtitle">Figma - Spain</span>
+                    <div className="qualification__calendar">
+                      <UilSchedule/>
+                      2017 - 2019
+                    </div>
+                  </div>
+
+                  <div>
+                    <span className="qualification__rounder"></span>
+                    {/* <span className="qualification__line"></span> */}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services */}
+        <section className="services section" id="services">
+          <h2 className="section__title">Services</h2>
+          <span className="section__subtitle">What i offer</span>
+
+          <div className="services__container container grid">
+            {/* Services 1 */}
+            <div className="services__content">
+              <div>
+                  
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );
