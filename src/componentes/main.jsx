@@ -15,7 +15,13 @@ import {
   UilSwatchbook,
   UilGraduationCap,
   UilSuitcaseAlt,
-  UilSchedule
+  UilSchedule,
+  UilWebGrid,
+  UilArrowRight,
+  UilTimes,
+  UilCheckCircle,
+  UilArrow,
+  UilPen
 } from "@iconscout/react-unicons";
 import download from "../archivos/Curriculum.pdf";
 import image from "../imagenes/power.webp";
@@ -473,7 +479,126 @@ const Main = (props) => {
             {/* Services 1 */}
             <div className="services__content">
               <div>
-                  
+                <UilWebGrid className="services__icon"/>
+                <h3 className="services__title">Ui/Ux <br/> Designer </h3>
+              </div>
+
+              <span className="button button--flex button--small button--link services__button">
+                View More
+                <UilArrowRight className="button__icon"/>
+              </span>
+
+              <div className="services__modal">
+                <div className="services__modal-content">
+                  <h4 className="services__modal-title">Ui/Ux <br/> Designer </h4>
+                  <UilTimes className="services__modal-close"/>
+
+                  <ul className="services__modal-services grid">
+                    <li className="services__modal-service">
+                      <UilCheckCircle className="services__modal-icon"/>
+                      <p>I develop the user interface.</p>
+                    </li>
+
+                    <li className="services__modal-service">
+                      <UilCheckCircle className="services__modal-icon"/>
+                      <p>Web page development.</p>
+                    </li>
+
+                    <li className="services__modal-service">
+                      <UilCheckCircle className="services__modal-icon"/>
+                      <p>I create ux element interactions.</p>
+                    </li>
+
+                    <li className="services__modal-service">
+                      <UilCheckCircle className="services__modal-icon"/>
+                      <p>I position your company brand.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            {/* Services 2 */}
+            <div className="services__content">
+              <div>
+                <UilArrow className="services__icon"/>
+                <h3 className="services__title">Frontend <br/> Developer </h3>
+              </div>
+
+              <span className="button button--flex button--small button--link services__button">
+                View More
+                <UilArrowRight className="button__icon"/>
+              </span>
+
+              <div className="services__modal">
+                <div className="services__modal-content">
+                  <h4 className="services__modal-title">Frontend <br/> Developer </h4>
+                  <UilTimes className="services__modal-close"/>
+
+                  <ul className="services__modal-services grid">
+                    <li className="services__modal-service">
+                      <UilCheckCircle className="services__modal-icon"/>
+                      <p>I develop the user interface.</p>
+                    </li>
+
+                    <li className="services__modal-service">
+                      <UilCheckCircle className="services__modal-icon"/>
+                      <p>Web page development.</p>
+                    </li>
+
+                    <li className="services__modal-service">
+                      <UilCheckCircle className="services__modal-icon"/>
+                      <p>I create ux element interactions.</p>
+                    </li>
+
+                    <li className="services__modal-service">
+                      <UilCheckCircle className="services__modal-icon"/>
+                      <p>I position your company brand.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Services 3 */}
+            <div className="services__content">
+              <div>
+                <UilPen className="services__icon"/>
+                <h3 className="services__title">Branding <br/> Designer </h3>
+              </div>
+
+              <span className="button button--flex button--small button--link services__button">
+                View More
+                <UilArrowRight className="button__icon"/>
+              </span>
+
+              <div className="services__modal">
+                <div className="services__modal-content">
+                  <h4 className="services__modal-title">Branding <br/> Designer </h4>
+                  <UilTimes className="services__modal-close"/>
+
+                  <ul className="services__modal-services grid">
+                    <li className="services__modal-service">
+                      <UilCheckCircle className="services__modal-icon"/>
+                      <p>I develop the user interface.</p>
+                    </li>
+
+                    <li className="services__modal-service">
+                      <UilCheckCircle className="services__modal-icon"/>
+                      <p>Web page development.</p>
+                    </li>
+
+                    <li className="services__modal-service">
+                      <UilCheckCircle className="services__modal-icon"/>
+                      <p>I create ux element interactions.</p>
+                    </li>
+
+                    <li className="services__modal-service">
+                      <UilCheckCircle className="services__modal-icon"/>
+                      <p>I position your company brand.</p>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
