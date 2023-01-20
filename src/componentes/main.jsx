@@ -19,13 +19,27 @@ import image from "../imagenes/power.webp";
 import { useState } from "react";
 
 const Main = (props) => {
-  const [open, setOpen] = useState(false);
+  const [open1, setOpen1] = useState(false);
+  const [open2, setOpen2] = useState(false);
+  const [open3, setOpen3] = useState(false);
 
-  const onClick = () => {
-    if(open === false){
-      setOpen(true);
-    } else{
-      setOpen(false);
+  const onClick = (value) => {
+    if(value === "open1" && open1 === false ){
+      setOpen1(true);
+      setOpen2(false);
+      setOpen3(false);
+    } else if (value === "open2" && open2 === false){
+      setOpen1(false);
+      setOpen2(true);
+      setOpen3(false);
+    } else if (value === "open3" && open3 === false ){
+      setOpen1(false);
+      setOpen2(false);
+      setOpen3(true);
+    } else {
+      setOpen1(false);
+      setOpen2(false);
+      setOpen3(false);
     }
   }
 
@@ -74,7 +88,7 @@ const Main = (props) => {
                 <UilMouseAlt size="2rem" className="home__scroll-mouse" />
                 <span className="home__scroll-name">Scroll down</span>
                 <UilArrowDown size="1.25rem" className="home__scroll-arrow" />
-              </a>
+              </a>  
             </div>  
           </div>
         </section>
@@ -126,10 +140,10 @@ const Main = (props) => {
           <div className="skills__container container grid">
             <div>
               {/* Skills 1 */}
-              <div className="skills__content skills__open">
-                <div className="skills__header">
-                  <UilBracketsCurly className="skills__icon"/>
-                  <div>
+              <div className={`skills__content ${open1 ? "skills__open" : "skills__close"}`}>
+                <div className="skills__header" onClick={()=>{onClick("open1")}} >
+                  <UilBracketsCurly className="skills__icon"/>  
+                  <div> 
                     <h1 className="skills__titles">Frontend developer</h1>
                     <span className="skills__subtitle">More than 4 years</span>
                   </div>
@@ -179,8 +193,8 @@ const Main = (props) => {
                 </div>
               </div>
               {/* skills 2 */}
-              <div className="skills__content skills__close">
-                <div className="skills__header">
+              <div className={`skills__content ${open2 ? "skills__open" : "skills__close"}`}>
+                <div className="skills__header" onClick={()=>{onClick("open2")}} >
                   <UilServer className="skills__icon"/>
                   <div>
                     <h1 className="skills__titles">Frontend developer</h1>
@@ -232,8 +246,8 @@ const Main = (props) => {
                 </div>
               </div>
               {/* skills 3 */}
-              <div className="skills__content skills__close">
-                <div className="skills__header">
+              <div className={`skills__content ${open3 ? "skills__open" : "skills__close"}`}>
+                <div className="skills__header" onClick={()=>{onClick("open3")}} >
                   <UilSwatchbook className="skills__icon"/>
                   <div>
                     <h1 className="skills__titles">Designer</h1>
