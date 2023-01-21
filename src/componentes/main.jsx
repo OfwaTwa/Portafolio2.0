@@ -35,6 +35,10 @@ const Main = (props) => {
   // Qualification
   const [openEducation, setOpenEducation] = useState(true);
   const [openWork, setOpenWork] = useState(false);
+  //Services
+  const[openServices1, setOpenServices1] = useState(false);
+  const[openServices2, setOpenServices2] = useState(false);
+  const[openServices3, setOpenServices3] = useState(false);
 
   const onClickSkills = (value) => {
     if(value === "open1" && open1 === false ){
@@ -69,12 +73,25 @@ const Main = (props) => {
     }
   }
 
+  const onClickServices = (value) => {
+    if(value === "open1"){
+      setOpenServices1(true);
+    }else if(value === "open2"){
+      setOpenServices2(true); 
+    }else if(value === "open3"){
+      setOpenServices3(true);
+    } else{
+      setOpenServices1(false);
+      setOpenServices2(false);
+      setOpenServices3(false);
+    }
+  }
+
   return (
     <>
       <main className="main">
         
-        {/* Home */}
-        
+        {/* Home */}       
         <section className="home section" id="home">
           <div className="home__container container grid">
             <div className="home__content grid">
@@ -120,7 +137,6 @@ const Main = (props) => {
         </section>
 
         {/* About */}
-
         <section className="about section" id="about">
           <h2 className="section__title">About Me</h2>
           <span className="section__subtitle">My introduction</span>
@@ -483,15 +499,15 @@ const Main = (props) => {
                 <h3 className="services__title">Ui/Ux <br/> Designer </h3>
               </div>
 
-              <span className="button button--flex button--small button--link services__button">
+              <span className="button button--flex button--small button--link services__button" onClick={()=>{ onClickServices("open1") }}>
                 View More
                 <UilArrowRight className="button__icon"/>
               </span>
 
-              <div className="services__modal">
+              <div className={`services__modal ${openServices1 ? "active-modal" : null}`}>
                 <div className="services__modal-content">
                   <h4 className="services__modal-title">Ui/Ux <br/> Designer </h4>
-                  <UilTimes className="services__modal-close"/>
+                  <UilTimes className="services__modal-close" onClick={()=>{onClickServices()}} />
 
                   <ul className="services__modal-services grid">
                     <li className="services__modal-service">
@@ -525,15 +541,15 @@ const Main = (props) => {
                 <h3 className="services__title">Frontend <br/> Developer </h3>
               </div>
 
-              <span className="button button--flex button--small button--link services__button">
+              <span className="button button--flex button--small button--link services__button" onClick={()=>{ onClickServices("open2") }} >
                 View More
                 <UilArrowRight className="button__icon"/>
               </span>
 
-              <div className="services__modal">
+              <div className={`services__modal ${openServices2 ? "active-modal" : null}`}>
                 <div className="services__modal-content">
                   <h4 className="services__modal-title">Frontend <br/> Developer </h4>
-                  <UilTimes className="services__modal-close"/>
+                  <UilTimes className="services__modal-close" onClick={()=>{onClickServices()}}/>
 
                   <ul className="services__modal-services grid">
                     <li className="services__modal-service">
@@ -567,15 +583,15 @@ const Main = (props) => {
                 <h3 className="services__title">Branding <br/> Designer </h3>
               </div>
 
-              <span className="button button--flex button--small button--link services__button">
+              <span className="button button--flex button--small button--link services__button" onClick={()=>{ onClickServices("open3") }} >
                 View More
                 <UilArrowRight className="button__icon"/>
               </span>
 
-              <div className="services__modal">
+              <div className={`services__modal ${openServices3 ? "active-modal" : null}`}>
                 <div className="services__modal-content">
                   <h4 className="services__modal-title">Branding <br/> Designer </h4>
-                  <UilTimes className="services__modal-close"/>
+                  <UilTimes className="services__modal-close" onClick={()=>{onClickServices()}} />
 
                   <ul className="services__modal-services grid">
                     <li className="services__modal-service">
@@ -602,6 +618,12 @@ const Main = (props) => {
               </div>
             </div>
           </div>
+        </section>
+
+        {/* Portfolio */}
+        <section className="portfolio section" id="portfolio">
+          <h2 className="section__title">Portfolio</h2>
+          <span className="section__subtitle">Most recent work</span>
         </section>
       </main>
     </>
