@@ -25,6 +25,7 @@ import {
 } from "@iconscout/react-unicons";
 import download from "../archivos/Curriculum.pdf";
 import image from "../imagenes/power.webp";
+import portfolio1 from "../imagenes/portfolio1.png"
 import { useState } from "react";
 
 const Main = (props) => {
@@ -624,6 +625,55 @@ const Main = (props) => {
         <section className="portfolio section" id="portfolio">
           <h2 className="section__title">Portfolio</h2>
           <span className="section__subtitle">Most recent work</span>
+
+          <div className="portfolio__container container">
+            <div>
+              {/* Portfolio 1 */}
+              <div className="portfolio__content grid">
+                <img src={portfolio1} alt="" className="portfolio__img" />
+
+                <div className="portfolio__data">
+                  <h3 className="portfolio__title">Rick & Morty API</h3>
+                  <p className="portfolio__description">Rick and Morty API consumption, 
+                  with an interactive menu, and different presentations.</p>
+                  <a href="#" className="button button--flex button--small portfolio__button">
+                    Demo
+                    <UilArrowRight className="button__icon"/>
+                  </a>
+                </div>
+              </div>
+
+              {/* Portfolio 2 */}
+              <div className="portfolio__content grid">
+                <img src={portfolio1} alt="" className="portfolio__img" />
+
+                <div className="portfolio__data">
+                  <h3 className="portfolio__title">Rick & Morty API</h3>
+                  <p className="portfolio__description">Rick and Morty API consumption, 
+                  with an interactive menu, and different presentations.</p>
+                  <a href="#" className="button button--flex button--small portfolio__button">
+                    Demo
+                    <UilArrowRight className="button__icon"/>
+                  </a>
+                </div>
+              </div>
+
+              {/* Portfolio 3 */}
+              <div className="portfolio__content grid">
+                <img src={portfolio1} alt="" className="portfolio__img" />
+
+                <div className="portfolio__data">
+                  <h3 className="portfolio__title">Rick & Morty API</h3>
+                  <p className="portfolio__description">Rick and Morty API consumption, 
+                  with an interactive menu, and different presentations.</p>
+                  <a href="#" className="button button--flex button--small portfolio__button">
+                    Demo
+                    <UilArrowRight className="button__icon"/>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </>
