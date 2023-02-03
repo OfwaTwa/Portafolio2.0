@@ -1,6 +1,11 @@
 import React from "react";
+import { useState } from "react";
+import download from "../archivos/Curriculum.pdf";
 import "../index.css";
+//Imagen de perfil
 import icon from "../imagenes/image.png";
+import image from "../imagenes/power.webp";
+//Iconos
 import {
   UilLinkedin,
   UilGithub,
@@ -21,12 +26,20 @@ import {
   UilTimes,
   UilCheckCircle,
   UilArrow,
-  UilPen
+  UilPen,
 } from "@iconscout/react-unicons";
-import download from "../archivos/Curriculum.pdf";
-import image from "../imagenes/power.webp";
-import portfolio1 from "../imagenes/portfolio1.png"
-import { useState } from "react";
+//imagenes del portafolio
+import portfolio1 from "../imagenes/portfolio1.png";
+import portfolio2 from "../imagenes/portfolio2.webp";
+import portfolio3 from "../imagenes/portfolio3.jpg";
+//swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+//import Styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const Main = (props) => {
   // Skills
@@ -37,20 +50,20 @@ const Main = (props) => {
   const [openEducation, setOpenEducation] = useState(true);
   const [openWork, setOpenWork] = useState(false);
   //Services
-  const[openServices1, setOpenServices1] = useState(false);
-  const[openServices2, setOpenServices2] = useState(false);
-  const[openServices3, setOpenServices3] = useState(false);
+  const [openServices1, setOpenServices1] = useState(false);
+  const [openServices2, setOpenServices2] = useState(false);
+  const [openServices3, setOpenServices3] = useState(false);
 
   const onClickSkills = (value) => {
-    if(value === "open1" && open1 === false ){
+    if (value === "open1" && open1 === false) {
       setOpen1(true);
       setOpen2(false);
       setOpen3(false);
-    } else if (value === "open2" && open2 === false){
+    } else if (value === "open2" && open2 === false) {
       setOpen1(false);
       setOpen2(true);
       setOpen3(false);
-    } else if (value === "open3" && open3 === false ){
+    } else if (value === "open3" && open3 === false) {
       setOpen1(false);
       setOpen2(false);
       setOpen3(true);
@@ -59,40 +72,39 @@ const Main = (props) => {
       setOpen2(false);
       setOpen3(false);
     }
-  }
+  };
 
   const onClickQualification = (value) => {
-    if(value === "open1" && openEducation === false ){
+    if (value === "open1" && openEducation === false) {
       setOpenEducation(true);
-      setOpenWork(false); 
-    } else if(value === "open2" && openWork === false){
+      setOpenWork(false);
+    } else if (value === "open2" && openWork === false) {
       setOpenEducation(false);
       setOpenWork(true);
     } else {
       setOpenEducation(false);
       setOpenWork(false);
     }
-  }
+  };
 
   const onClickServices = (value) => {
-    if(value === "open1"){
+    if (value === "open1") {
       setOpenServices1(true);
-    }else if(value === "open2"){
-      setOpenServices2(true); 
-    }else if(value === "open3"){
+    } else if (value === "open2") {
+      setOpenServices2(true);
+    } else if (value === "open3") {
       setOpenServices3(true);
-    } else{
+    } else {
       setOpenServices1(false);
       setOpenServices2(false);
       setOpenServices3(false);
     }
-  }
+  };
 
   return (
     <>
       <main className="main">
-        
-        {/* Home */}       
+        {/* Home */}
         <section className="home section" id="home">
           <div className="home__container container grid">
             <div className="home__content grid">
@@ -101,13 +113,13 @@ const Main = (props) => {
                   href="https://www.linkedin.com/in/steven-chamorro/"
                   target="_blank"
                 >
-                  <UilLinkedin className="home__social-icon"/>
+                  <UilLinkedin className="home__social-icon" />
                 </a>
                 <a href="https://github.com/OfwaTwa" target="_blank">
-                  <UilGithub className="home__social-icon"/>
+                  <UilGithub className="home__social-icon" />
                 </a>
                 <a href="" target="_blank">
-                  <UilLinkBroken className="home__social-icon"/>
+                  <UilLinkBroken className="home__social-icon" />
                 </a>
               </div>
 
@@ -132,8 +144,8 @@ const Main = (props) => {
                 <UilMouseAlt size="2rem" className="home__scroll-mouse" />
                 <span className="home__scroll-name">Scroll down</span>
                 <UilArrowDown size="1.25rem" className="home__scroll-arrow" />
-              </a>  
-            </div>  
+              </a>
+            </div>
           </div>
         </section>
 
@@ -146,33 +158,43 @@ const Main = (props) => {
             <img src={image} alt="" className="about__img" />
 
             <div className="about__data">
-              <p className="about__description">Web developer, with expensive knowledge and years of
-                experience, working in web technologies and Ui / Ux design, delivering quality work. </p>
-              
+              <p className="about__description">
+                Web developer, with expensive knowledge and years of experience,
+                working in web technologies and Ui / Ux design, delivering
+                quality work.{" "}
+              </p>
+
               <div className="about__info">
                 <div>
                   <span className="about__info-title">08+</span>
-                  <span className="about__info-name">Years <br/> experience </span>
+                  <span className="about__info-name">
+                    Years <br /> experience{" "}
+                  </span>
                 </div>
 
                 <div>
                   <span className="about__info-title">+20</span>
-                  <span className="about__info-name">Completed <br/> project </span>
+                  <span className="about__info-name">
+                    Completed <br /> project{" "}
+                  </span>
                 </div>
-                
+
                 <div>
                   <span className="about__info-title">05+</span>
-                  <span className="about__info-name">Companies <br/> worked </span>
+                  <span className="about__info-name">
+                    Companies <br /> worked{" "}
+                  </span>
                 </div>
               </div>
 
               <div className="about__buttons">
                 <a download="" href={download} className="button button--flex">
-                  Download CV<UilImport className="button__icon"/>
+                  Download CV
+                  <UilImport className="button__icon" />
                 </a>
               </div>
             </div>
-          </div>          
+          </div>
         </section>
 
         {/* skills */}
@@ -183,14 +205,23 @@ const Main = (props) => {
           <div className="skills__container container grid">
             <div>
               {/* Skills 1 */}
-              <div className={`skills__content ${open1 ? "skills__open" : "skills__close"}`}>
-                <div className="skills__header" onClick={()=>{onClickSkills("open1")}} >
-                  <UilBracketsCurly className="skills__icon"/>  
-                  <div> 
+              <div
+                className={`skills__content ${
+                  open1 ? "skills__open" : "skills__close"
+                }`}
+              >
+                <div
+                  className="skills__header"
+                  onClick={() => {
+                    onClickSkills("open1");
+                  }}
+                >
+                  <UilBracketsCurly className="skills__icon" />
+                  <div>
                     <h1 className="skills__titles">Frontend developer</h1>
                     <span className="skills__subtitle">More than 4 years</span>
                   </div>
-                  <UilAngleDown className="skills__arrow"/>
+                  <UilAngleDown className="skills__arrow" />
                 </div>
 
                 <div className="skills__list grid">
@@ -236,14 +267,23 @@ const Main = (props) => {
                 </div>
               </div>
               {/* skills 2 */}
-              <div className={`skills__content ${open2 ? "skills__open" : "skills__close"}`}>
-                <div className="skills__header" onClick={()=>{onClickSkills("open2")}} >
-                  <UilServer className="skills__icon"/>
+              <div
+                className={`skills__content ${
+                  open2 ? "skills__open" : "skills__close"
+                }`}
+              >
+                <div
+                  className="skills__header"
+                  onClick={() => {
+                    onClickSkills("open2");
+                  }}
+                >
+                  <UilServer className="skills__icon" />
                   <div>
                     <h1 className="skills__titles">Frontend developer</h1>
                     <span className="skills__subtitle">More than 4 years</span>
                   </div>
-                  <UilAngleDown className="skills__arrow"/>
+                  <UilAngleDown className="skills__arrow" />
                 </div>
 
                 <div className="skills__list grid">
@@ -267,21 +307,21 @@ const Main = (props) => {
                     </div>
                   </div>
 
-                  <div className="skills__data">  
+                  <div className="skills__data">
                     <div className="skills__titles">
                       <h3 className="skills__name">Firebase</h3>
                       <span className="skills__number">80%</span>
                     </div>
                     <div className="skills__bar">
                       <span className="skills__percentage skills__firebase"></span>
-                    </div>  
+                    </div>
                   </div>
 
                   <div className="skills__data">
                     <div className="skills__titles">
                       <h3 className="skills__name">Python</h3>
                       <span className="skills__number">85%</span>
-                    </div>  
+                    </div>
                     <div className="skills__bar">
                       <span className="skills__percentage skills__python"></span>
                     </div>
@@ -289,14 +329,23 @@ const Main = (props) => {
                 </div>
               </div>
               {/* skills 3 */}
-              <div className={`skills__content ${open3 ? "skills__open" : "skills__close"}`}>
-                <div className="skills__header" onClick={()=>{onClickSkills("open3")}} >
-                  <UilSwatchbook className="skills__icon"/>
+              <div
+                className={`skills__content ${
+                  open3 ? "skills__open" : "skills__close"
+                }`}
+              >
+                <div
+                  className="skills__header"
+                  onClick={() => {
+                    onClickSkills("open3");
+                  }}
+                >
+                  <UilSwatchbook className="skills__icon" />
                   <div>
                     <h1 className="skills__titles">Designer</h1>
                     <span className="skil ls__subtitle">More than 3 years</span>
                   </div>
-                  <UilAngleDown className="skills__arrow"/>
+                  <UilAngleDown className="skills__arrow" />
                 </div>
 
                 <div className="skills__list grid">
@@ -329,7 +378,6 @@ const Main = (props) => {
                       <span className="skills__percentage skills__photoshop"></span>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -342,27 +390,51 @@ const Main = (props) => {
 
           <div className="qualification__container container">
             <div className="qualification__tabs">
-              <div className={`qualification__button button--flex ${openEducation ? "qualification__active" : null }`} data-target='#education' onClick={()=>{ onClickQualification("open1")}} >
-                <UilGraduationCap className="qualification__icon"/>
+              <div
+                className={`qualification__button button--flex ${
+                  openEducation ? "qualification__active" : null
+                }`}
+                data-target="#education"
+                onClick={() => {
+                  onClickQualification("open1");
+                }}
+              >
+                <UilGraduationCap className="qualification__icon" />
                 Education
               </div>
 
-              <div className={`qualification__button button--flex ${openWork ? "qualification__active" : null }`} data-target='#work' onClick={()=>{ onClickQualification("open2")}}>
-                <UilSuitcaseAlt className="qualification__icon"/>
+              <div
+                className={`qualification__button button--flex ${
+                  openWork ? "qualification__active" : null
+                }`}
+                data-target="#work"
+                onClick={() => {
+                  onClickQualification("open2");
+                }}
+              >
+                <UilSuitcaseAlt className="qualification__icon" />
                 Work
               </div>
             </div>
 
             <div className="qualification__sections">
               {/* Qualification content 1 */}
-              <div className={`qualification__content ${openEducation ? "qualification__active"  : null}`} data-content id="education" >
+              <div
+                className={`qualification__content ${
+                  openEducation ? "qualification__active" : null
+                }`}
+                data-content
+                id="education"
+              >
                 {/* Qualification 1 */}
                 <div className="qualification__data">
                   <div>
                     <h3 className="qualification__title">Systems Engineer</h3>
-                    <span className="qualification__subtitle">Udenar - University</span>
+                    <span className="qualification__subtitle">
+                      Udenar - University
+                    </span>
                     <div className="qualification__calendar">
-                      <UilSchedule/>
+                      <UilSchedule />
                       2009 - 2014
                     </div>
                   </div>
@@ -384,9 +456,11 @@ const Main = (props) => {
 
                   <div>
                     <h3 className="qualification__title">Web Desing</h3>
-                    <span className="qualification__subtitle">Spain - University</span>
+                    <span className="qualification__subtitle">
+                      Spain - University
+                    </span>
                     <div className="qualification__calendar">
-                      <UilSchedule/>
+                      <UilSchedule />
                       2014 - 2017
                     </div>
                   </div>
@@ -396,9 +470,11 @@ const Main = (props) => {
                 <div className="qualification__data">
                   <div>
                     <h3 className="qualification__title">Web development</h3>
-                    <span className="qualification__subtitle">Colombian - Institute</span>
+                    <span className="qualification__subtitle">
+                      Colombian - Institute
+                    </span>
                     <div className="qualification__calendar">
-                      <UilSchedule/>
+                      <UilSchedule />
                       2017 - 2019
                     </div>
                   </div>
@@ -420,23 +496,33 @@ const Main = (props) => {
 
                   <div>
                     <h3 className="qualification__title">Master in Ui/Ux</h3>
-                    <span className="qualification__subtitle">Colombian - Institute</span>
+                    <span className="qualification__subtitle">
+                      Colombian - Institute
+                    </span>
                     <div className="qualification__calendar">
-                      <UilSchedule/>
+                      <UilSchedule />
                       2019 - 2021
                     </div>
                   </div>
                 </div>
               </div>
               {/* Qualification content 2 */}
-              <div className={`qualification__content ${openWork ? "qualification__active"  : null}`} data-content id="work">
+              <div
+                className={`qualification__content ${
+                  openWork ? "qualification__active" : null
+                }`}
+                data-content
+                id="work"
+              >
                 {/* Qualification 1 */}
                 <div className="qualification__data">
                   <div>
                     <h3 className="qualification__title">Software Enginner</h3>
-                    <span className="qualification__subtitle">Microsft - Colombian</span>
+                    <span className="qualification__subtitle">
+                      Microsft - Colombian
+                    </span>
                     <div className="qualification__calendar">
-                      <UilSchedule/>
+                      <UilSchedule />
                       2016 - 2018
                     </div>
                   </div>
@@ -458,9 +544,11 @@ const Main = (props) => {
 
                   <div>
                     <h3 className="qualification__title">Frontend developer</h3>
-                    <span className="qualification__subtitle">Apple Inc - Spain</span>
+                    <span className="qualification__subtitle">
+                      Apple Inc - Spain
+                    </span>
                     <div className="qualification__calendar">
-                      <UilSchedule/>
+                      <UilSchedule />
                       2018 - 2020
                     </div>
                   </div>
@@ -470,9 +558,11 @@ const Main = (props) => {
                 <div className="qualification__data">
                   <div>
                     <h3 className="qualification__title">Ui Designer</h3>
-                    <span className="qualification__subtitle">Figma - Spain</span>
+                    <span className="qualification__subtitle">
+                      Figma - Spain
+                    </span>
                     <div className="qualification__calendar">
-                      <UilSchedule/>
+                      <UilSchedule />
                       2017 - 2019
                     </div>
                   </div>
@@ -496,80 +586,116 @@ const Main = (props) => {
             {/* Services 1 */}
             <div className="services__content">
               <div>
-                <UilWebGrid className="services__icon"/>
-                <h3 className="services__title">Ui/Ux <br/> Designer </h3>
+                <UilWebGrid className="services__icon" />
+                <h3 className="services__title">
+                  Ui/Ux <br /> Designer{" "}
+                </h3>
               </div>
 
-              <span className="button button--flex button--small button--link services__button" onClick={()=>{ onClickServices("open1") }}>
+              <span
+                className="button button--flex button--small button--link services__button"
+                onClick={() => {
+                  onClickServices("open1");
+                }}
+              >
                 View More
-                <UilArrowRight className="button__icon"/>
+                <UilArrowRight className="button__icon" />
               </span>
 
-              <div className={`services__modal ${openServices1 ? "active-modal" : null}`}>
+              <div
+                className={`services__modal ${
+                  openServices1 ? "active-modal" : null
+                }`}
+              >
                 <div className="services__modal-content">
-                  <h4 className="services__modal-title">Ui/Ux <br/> Designer </h4>
-                  <UilTimes className="services__modal-close" onClick={()=>{onClickServices()}} />
+                  <h4 className="services__modal-title">
+                    Ui/Ux <br /> Designer{" "}
+                  </h4>
+                  <UilTimes
+                    className="services__modal-close"
+                    onClick={() => {
+                      onClickServices();
+                    }}
+                  />
 
                   <ul className="services__modal-services grid">
                     <li className="services__modal-service">
-                      <UilCheckCircle className="services__modal-icon"/>
+                      <UilCheckCircle className="services__modal-icon" />
                       <p>I develop the user interface.</p>
                     </li>
 
                     <li className="services__modal-service">
-                      <UilCheckCircle className="services__modal-icon"/>
+                      <UilCheckCircle className="services__modal-icon" />
                       <p>Web page development.</p>
                     </li>
 
                     <li className="services__modal-service">
-                      <UilCheckCircle className="services__modal-icon"/>
+                      <UilCheckCircle className="services__modal-icon" />
                       <p>I create ux element interactions.</p>
                     </li>
 
                     <li className="services__modal-service">
-                      <UilCheckCircle className="services__modal-icon"/>
+                      <UilCheckCircle className="services__modal-icon" />
                       <p>I position your company brand.</p>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-            
+
             {/* Services 2 */}
             <div className="services__content">
               <div>
-                <UilArrow className="services__icon"/>
-                <h3 className="services__title">Frontend <br/> Developer </h3>
+                <UilArrow className="services__icon" />
+                <h3 className="services__title">
+                  Frontend <br /> Developer{" "}
+                </h3>
               </div>
 
-              <span className="button button--flex button--small button--link services__button" onClick={()=>{ onClickServices("open2") }} >
+              <span
+                className="button button--flex button--small button--link services__button"
+                onClick={() => {
+                  onClickServices("open2");
+                }}
+              >
                 View More
-                <UilArrowRight className="button__icon"/>
+                <UilArrowRight className="button__icon" />
               </span>
 
-              <div className={`services__modal ${openServices2 ? "active-modal" : null}`}>
+              <div
+                className={`services__modal ${
+                  openServices2 ? "active-modal" : null
+                }`}
+              >
                 <div className="services__modal-content">
-                  <h4 className="services__modal-title">Frontend <br/> Developer </h4>
-                  <UilTimes className="services__modal-close" onClick={()=>{onClickServices()}}/>
+                  <h4 className="services__modal-title">
+                    Frontend <br /> Developer{" "}
+                  </h4>
+                  <UilTimes
+                    className="services__modal-close"
+                    onClick={() => {
+                      onClickServices();
+                    }}
+                  />
 
                   <ul className="services__modal-services grid">
                     <li className="services__modal-service">
-                      <UilCheckCircle className="services__modal-icon"/>
+                      <UilCheckCircle className="services__modal-icon" />
                       <p>I develop the user interface.</p>
                     </li>
 
                     <li className="services__modal-service">
-                      <UilCheckCircle className="services__modal-icon"/>
+                      <UilCheckCircle className="services__modal-icon" />
                       <p>Web page development.</p>
                     </li>
 
                     <li className="services__modal-service">
-                      <UilCheckCircle className="services__modal-icon"/>
+                      <UilCheckCircle className="services__modal-icon" />
                       <p>I create ux element interactions.</p>
                     </li>
 
                     <li className="services__modal-service">
-                      <UilCheckCircle className="services__modal-icon"/>
+                      <UilCheckCircle className="services__modal-icon" />
                       <p>I position your company brand.</p>
                     </li>
                   </ul>
@@ -580,38 +706,56 @@ const Main = (props) => {
             {/* Services 3 */}
             <div className="services__content">
               <div>
-                <UilPen className="services__icon"/>
-                <h3 className="services__title">Branding <br/> Designer </h3>
+                <UilPen className="services__icon" />
+                <h3 className="services__title">
+                  Branding <br /> Designer{" "}
+                </h3>
               </div>
 
-              <span className="button button--flex button--small button--link services__button" onClick={()=>{ onClickServices("open3") }} >
+              <span
+                className="button button--flex button--small button--link services__button"
+                onClick={() => {
+                  onClickServices("open3");
+                }}
+              >
                 View More
-                <UilArrowRight className="button__icon"/>
+                <UilArrowRight className="button__icon" />
               </span>
 
-              <div className={`services__modal ${openServices3 ? "active-modal" : null}`}>
+              <div
+                className={`services__modal ${
+                  openServices3 ? "active-modal" : null
+                }`}
+              >
                 <div className="services__modal-content">
-                  <h4 className="services__modal-title">Branding <br/> Designer </h4>
-                  <UilTimes className="services__modal-close" onClick={()=>{onClickServices()}} />
+                  <h4 className="services__modal-title">
+                    Branding <br /> Designer{" "}
+                  </h4>
+                  <UilTimes
+                    className="services__modal-close"
+                    onClick={() => {
+                      onClickServices();
+                    }}
+                  />
 
                   <ul className="services__modal-services grid">
                     <li className="services__modal-service">
-                      <UilCheckCircle className="services__modal-icon"/>
+                      <UilCheckCircle className="services__modal-icon" />
                       <p>I develop the user interface.</p>
                     </li>
 
                     <li className="services__modal-service">
-                      <UilCheckCircle className="services__modal-icon"/>
+                      <UilCheckCircle className="services__modal-icon" />
                       <p>Web page development.</p>
                     </li>
 
                     <li className="services__modal-service">
-                      <UilCheckCircle className="services__modal-icon"/>
+                      <UilCheckCircle className="services__modal-icon" />
                       <p>I create ux element interactions.</p>
                     </li>
 
                     <li className="services__modal-service">
-                      <UilCheckCircle className="services__modal-icon"/>
+                      <UilCheckCircle className="services__modal-icon" />
                       <p>I position your company brand.</p>
                     </li>
                   </ul>
@@ -626,52 +770,77 @@ const Main = (props) => {
           <h2 className="section__title">Portfolio</h2>
           <span className="section__subtitle">Most recent work</span>
 
-          <div className="portfolio__container container">
-            <div>
-              {/* Portfolio 1 */}
-              <div className="portfolio__content grid">
-                <img src={portfolio1} alt="" className="portfolio__img" />
+          <div className="portfolio__container container swiper-container">
+            <div className="swiper-wrapper">
+              <Swiper
+                // install Swiper modules
+                modules={[Navigation, Pagination, Scrollbar]}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true }}
+              >
+                <SwiperSlide>
+                  {/* Portfolio 1 */}
+                  <div className="portfolio__content grid swiper-slide">
+                    <img src={portfolio1} alt="" className="portfolio__img" />
 
-                <div className="portfolio__data">
-                  <h3 className="portfolio__title">Rick & Morty API</h3>
-                  <p className="portfolio__description">Rick and Morty API consumption, 
-                  with an interactive menu, and different presentations.</p>
-                  <a href="#" className="button button--flex button--small portfolio__button">
-                    Demo
-                    <UilArrowRight className="button__icon"/>
-                  </a>
-                </div>
-              </div>
+                    <div className="portfolio__data">
+                      <h3 className="portfolio__title">Rick & Morty API</h3>
+                      <p className="portfolio__description">
+                        Rick and Morty API consumption, with an interactive
+                        menu, and different presentations.
+                      </p>
+                      <a
+                        href="#"
+                        className="button button--flex button--small portfolio__button"
+                      >
+                        Demo
+                        <UilArrowRight className="button__icon" />
+                      </a>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  {/* Portfolio 2 */}
+                  <div className="portfolio__content grid swiper-slide">
+                    <img src={portfolio2} alt="" className="portfolio__img" />
 
-              {/* Portfolio 2 */}
-              <div className="portfolio__content grid">
-                <img src={portfolio1} alt="" className="portfolio__img" />
+                    <div className="portfolio__data">
+                      <h3 className="portfolio__title">Calculator</h3>
+                      <p className="portfolio__description">
+                        calculator made in react.
+                      </p>
+                      <a
+                        href="#"
+                        className="button button--flex button--small portfolio__button"
+                      >
+                        Demo
+                        <UilArrowRight className="button__icon" />
+                      </a>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  {/* Portfolio 3 */}
+                  <div className="portfolio__content grid swiper-slide">
+                    <img src={portfolio3} alt="" className="portfolio__img" />
 
-                <div className="portfolio__data">
-                  <h3 className="portfolio__title">Rick & Morty API</h3>
-                  <p className="portfolio__description">Rick and Morty API consumption, 
-                  with an interactive menu, and different presentations.</p>
-                  <a href="#" className="button button--flex button--small portfolio__button">
-                    Demo
-                    <UilArrowRight className="button__icon"/>
-                  </a>
-                </div>
-              </div>
-
-              {/* Portfolio 3 */}
-              <div className="portfolio__content grid">
-                <img src={portfolio1} alt="" className="portfolio__img" />
-
-                <div className="portfolio__data">
-                  <h3 className="portfolio__title">Rick & Morty API</h3>
-                  <p className="portfolio__description">Rick and Morty API consumption, 
-                  with an interactive menu, and different presentations.</p>
-                  <a href="#" className="button button--flex button--small portfolio__button">
-                    Demo
-                    <UilArrowRight className="button__icon"/>
-                  </a>
-                </div>
-              </div>
+                    <div className="portfolio__data">
+                      <h3 className="portfolio__title">Netflix</h3>
+                      <p className="portfolio__description">
+                        netflix simulation project.
+                      </p>
+                      <a
+                        href="#"
+                        className="button button--flex button--small portfolio__button"
+                      >
+                        Demo
+                        <UilArrowRight className="button__icon" />
+                      </a>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              </Swiper>
             </div>
           </div>
         </section>
