@@ -165,12 +165,12 @@ img {
 
 .nav__logo,
 .nav__toggle{
-  color: var(--title-color);
-  font-weight: var(--font-medium);
+  color: var(--title-color) !important;
+  font-weight: var(--font-medium) !important;
 }
 
 .nav__logo:hover{
-  color: var(--first-color);
+  color: var(--first-color) !important;
 }
 
 .nav__toggle{
@@ -215,7 +215,7 @@ img {
 }
 
 .nav__icon{
-  font-size: 1.2rem;
+  font-size: 1.2rem !important;
 }
 
 .nav__close{
@@ -312,7 +312,7 @@ img {
 }
 
 .home__scroll-mouse{
-  font-size: 2rem;
+  font-size: 2rem !important;
 }
 
 .home__scroll-name{
@@ -323,7 +323,7 @@ img {
 }
 
 .home__scroll-arrow{
-  font-size: 1.25rem;
+  font-size: 1.25rem !important;
 }
 /*==================== BUTTONS ====================*/
 .button{
@@ -340,8 +340,8 @@ img {
 }
 
 .button__icon{
-  font-size: 1.25rem;
-  margin-left: var(--mb-0-5);
+  font-size: 1.25rem !important;
+  margin-left: var(--mb-0-5) !important;
   transition: .3s;
 }
 
@@ -419,7 +419,7 @@ img {
 
 .skills__icon,
 .skills__arrow{
-  font-size: 2rem;
+  font-size: 2rem !important;
   color: var(--first-color)
 }
 
@@ -717,7 +717,7 @@ img {
 
 .portfolio__title{
   font-size: var(--h3-font-size);
-  margin-bottom: --mb-0-5;
+  margin-bottom: var(--mb-0-5);
 }
 
 .portfolio__description{
@@ -731,6 +731,8 @@ img {
 .swiper-button-prev::after,
 .swiper-button-next::after{
   content: '';
+  font-size: 1.5rem !important;
+  color: var(--first-color) !important;
 }
 
 .swiper-portfolio-icon{
@@ -739,17 +741,15 @@ img {
 }
 
 .swiper-button-prev{
-  font-size: 2rem;
-  color: var(--first-color);
-  left: -.5rem;
+  left: -.5rem !important;
 }
 
 .swiper-button-next{
-  right: -.5rem;
+  right: -.5rem !important;
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets{
-  bottom: -2.5rem;
+  bottom: -2.5rem !important;
 }
 
 .swiper-pagination-bullet-active{

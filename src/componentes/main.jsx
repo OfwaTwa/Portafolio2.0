@@ -840,7 +840,19 @@ const Main = (props) => {
                     </div>
                   </div>
                 </SwiperSlide>
+                <div className="">Parte en blanco, por que no supe como solucionarlo D:</div>
               </Swiper>
+            </div>
+          </div>
+        </section>
+
+        {/* Project in mind */}
+        <section className="project section">
+          <div className="project__bg">
+            <div className="project__container container grid">
+              <div className="project__data">
+                <h2 className="project__title">You have a</h2>
+              </div>
             </div>
           </div>
         </section>
