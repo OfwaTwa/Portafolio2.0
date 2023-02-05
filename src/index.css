@@ -7,7 +7,7 @@
 
     /*========== Colors ==========*/
     /* Change favorite color */
-    --hue-color: 340; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    --hue-color: 230; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
     /* HSL color mode */
     --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -341,7 +341,8 @@ img {
 
 .button__icon{
   font-size: 1.25rem !important;
-  margin-left: var(--mb-0-5) !important;
+  size: 1.25rem !important;
+  margin-left: var(--mb-0-5);
   transition: .3s;
 }
 
@@ -802,7 +803,52 @@ img {
 
 
 /*==================== CONTACT ME ====================*/
+.contact__container{
+  row-gap: 3rem;
+}
 
+.contact__information{
+  display: flex;
+  margin-bottom: var(--mb-2);
+}
+
+.contact__icon{
+  font-size: 2rem !important;
+  color: var(--first-color);
+  margin-right: var(--mb-0-75);
+}
+
+.contact__title{
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+
+.contact__subtitle{
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.contact__content{
+  background-color: var(--input-color);
+  border-radius: .5rem;
+  padding: .75rem 1rem .25rem;
+}
+
+.contact__label{
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+
+.contact__input{
+  width: 100%;
+  background-color: var(--input-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  outline: none;
+  padding: .25rem .5rem .5rem 0;
+}
 
 /*==================== FOOTER ====================*/
 
