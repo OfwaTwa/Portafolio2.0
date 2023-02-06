@@ -10,6 +10,7 @@ import {
   UilFileEditAlt,
   UilSuitcaseAlt,
   UilScenery,
+  UilMoon
 } from "@iconscout/react-unicons";
 
 const Header = (props) => {
@@ -37,6 +38,11 @@ const Header = (props) => {
     };
     
   }, []);
+
+  useEffect(() => {
+    document.body.className = "dark-theme";
+  }, [ ]);
+  
 
   return (
     <div className="" >
@@ -81,7 +87,10 @@ const Header = (props) => {
             </ul>
             <UilTimes className="nav__close" id="nav-close" onClick={()=> {openMenu()} } />
           </div>
-          <div className="nav_btns">
+          <div className="nav__btns">
+            {/* theme change button */}
+            <UilMoon className="change-theme" id="theme-button"/>
+            
             <div className="nav__toggle" id="nav-toggle" onClick={ ()=> {openMenu()}} >
               <UilApps className="nav__toggle" onClick={ ()=> {openMenu()}} />
             </div>
