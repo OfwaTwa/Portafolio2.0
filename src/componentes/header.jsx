@@ -10,12 +10,14 @@ import {
   UilFileEditAlt,
   UilSuitcaseAlt,
   UilScenery,
-  UilMoon
+  UilMoon,
+  UilSun
 } from "@iconscout/react-unicons";
 
 const Header = (props) => {
   const [ open, setOpen ] = useState(false);
-
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [ active, setActive ] = useState(false);
   const openMenu = () => {
     if(open === false){
       setOpen(true);
@@ -24,7 +26,6 @@ const Header = (props) => {
     }
   }
 
-  const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
@@ -39,10 +40,15 @@ const Header = (props) => {
     
   }, []);
 
-  useEffect(() => {
-    document.body.className = "dark-theme";
-  }, [ ]);
-  
+  const changeTheme = (props) => {
+    if(active){
+      document.body.className = props;
+      setActive(false);
+    } else {
+      document.body.className = props;
+      setActive(true);
+    }
+  }
 
   return (
     <div className="" >
@@ -89,8 +95,9 @@ const Header = (props) => {
           </div>
           <div className="nav__btns">
             {/* theme change button */}
-            <UilMoon className="change-theme" id="theme-button"/>
-            
+            { active === false ? 
+              <UilMoon className="change-theme" id="theme-button" onClick={ ()=>{changeTheme( "dark-theme" )} } /> : 
+              <UilSun className="change-theme" id="theme-button" onClick={ ()=>{changeTheme( " " )} } />}
             <div className="nav__toggle" id="nav-toggle" onClick={ ()=> {openMenu()}} >
               <UilApps className="nav__toggle" onClick={ ()=> {openMenu()}} />
             </div>
