@@ -18,6 +18,16 @@ const Header = (props) => {
   const [ open, setOpen ] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [ active, setActive ] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+    
+  }, []);
+
   const openMenu = () => {
     if(open === false){
       setOpen(true);
@@ -30,15 +40,6 @@ const Header = (props) => {
     const position = window.pageYOffset;
     setScrollPosition(position);
   };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-    
-  }, []);
 
   const changeTheme = (props) => {
     if(active){
