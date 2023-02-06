@@ -388,6 +388,7 @@ const Main = (props) => {
             </div>
           </div>
         </section>
+        
         {/* Qualification */}
         <section className="qualification section">
           <h2 className="section__title">Qualification</h2>

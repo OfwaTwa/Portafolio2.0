@@ -1,6 +1,6 @@
 import React from "react";
 import "../index.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   UilApps,
   UilTimes,
@@ -23,6 +23,22 @@ const Header = (props) => {
     }
   }
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+    
+  }, []);
+  console.log(scrollPosition);
+
   return (
     <div className="">
       <header className="header" id="header">
@@ -34,32 +50,32 @@ const Header = (props) => {
           <div className={`nav__menu ${ open ? `show-menu` : null }`} id="nav-menu">
             <ul className="nav__list grid">
               <li className="nav__item" onClick={()=> {openMenu()} } >
-                <a href="#home" className="nav__link">
+                <a href="#home" className={`nav__link ${scrollPosition === 0 ? "active-link" : null}`} >
                   <UilEstate size="1.2rem" /> Home
                 </a>
               </li>
               <li className="nav__item" onClick={()=> {openMenu()} } >
-                <a href="#about" className="nav__link">
+                <a href="#about" className={`nav__link ${scrollPosition === 558 ? "active-link" : null}`} >
                   <UilUserCircle size="1.2rem" /> About
                 </a>
               </li>
               <li className="nav__item" onClick={()=> {openMenu()} } >
-                <a href="#skills" className="nav__link">
+                <a href="#skills" className={`nav__link ${scrollPosition === 1163 ? "active-link" : null}`} >
                   <UilFileEditAlt size="1.2rem" /> Skills
                 </a>
               </li>
               <li className="nav__item" onClick={()=> {openMenu()} } >
-                <a href="#services" className="nav__link">
+                <a href="#services" className={`nav__link ${scrollPosition === 2303 ? "active-link" : null}`} >
                   <UilSuitcaseAlt size="1.2rem" /> Services
                 </a>
               </li>
               <li className="nav__item" onClick={()=> {openMenu()} } >
-                <a href="#portfolio" className="nav__link">
+                <a href="#portfolio" className={`nav__link ${scrollPosition === 2948 ? "active-link" : null}`} >
                   <UilScenery size="1.2rem" /> Portfolio
                 </a>
               </li>
               <li className="nav__item" onClick={()=> {openMenu()} } >
-                <a href="#contact" className="nav__link">
+                <a href="#contact" className={`nav__link ${scrollPosition === 4042 ? "active-link" : null}`} >
                   <UilMessage size="1.2rem" /> Contacme
                 </a>
               </li>
