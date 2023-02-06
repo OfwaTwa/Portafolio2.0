@@ -37,11 +37,10 @@ const Header = (props) => {
     };
     
   }, []);
-  console.log(scrollPosition);
 
   return (
-    <div className="">
-      <header className="header" id="header">
+    <div className="" >
+      <header className={`header ${scrollPosition >= 80 ? "scroll-header" : null}`} id="header">
         <nav className="nav container">
           <a href="#" className="nav__logo">
             Logo
