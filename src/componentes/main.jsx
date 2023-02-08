@@ -29,7 +29,7 @@ import {
   UilPen,
   UilPhone,
   UilEnvelopeHeart,
-  UilMapMarker
+  UilMapMarker,
 } from "@iconscout/react-unicons";
 //imagenes del portafolio
 import portfolio1 from "../imagenes/portfolio1.png";
@@ -271,6 +271,8 @@ const Main = (props) => {
                   </div>
                 </div>
               </div>
+            </div>
+            <div>
               {/* skills 2 */}
               <div
                 className={`skills__content ${
@@ -333,6 +335,8 @@ const Main = (props) => {
                   </div>
                 </div>
               </div>
+            </div>
+            <div>
               {/* skills 3 */}
               <div
                 className={`skills__content ${
@@ -388,7 +392,7 @@ const Main = (props) => {
             </div>
           </div>
         </section>
-        
+
         {/* Qualification */}
         <section className="qualification section">
           <h2 className="section__title">Qualification</h2>
@@ -777,80 +781,78 @@ const Main = (props) => {
           <span className="section__subtitle">Most recent work</span>
 
           <div className="portfolio__container container swiper-container">
-            <div className="swiper-wrapper">
-              <Swiper
-                // install Swiper modules
-                modules={[Navigation, Pagination, Scrollbar]}
-                slidesPerView={1}
-                navigation
-                pagination={{ clickable: true }}
-              >
-                <SwiperSlide>
-                  {/* Portfolio 1 */}
-                  <div className="portfolio__content grid swiper-slide">
-                    <img src={portfolio1} alt="" className="portfolio__img" />
+            <Swiper
+              // install Swiper modules
+              modules={[Navigation, Pagination, Scrollbar]}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
+              className="swiper-wrapper"
+            >
+              <SwiperSlide>
+                {/* Portfolio 1 */}
+                <div className="portfolio__content grid swiper-slide">
+                  <img src={portfolio1} alt="" className="portfolio__img" />
 
-                    <div className="portfolio__data">
-                      <h3 className="portfolio__title">Rick & Morty API</h3>
-                      <p className="portfolio__description">
-                        Rick and Morty API consumption, with an interactive
-                        menu, and different presentations.
-                      </p>
-                      <a
-                        href="#"
-                        className="button button--flex button--small portfolio__button"
-                      >
-                        Demo
-                        <UilArrowRight className="button__icon" />
-                      </a>
-                    </div>
+                  <div className="portfolio__data">
+                    <h3 className="portfolio__title">Rick & Morty API</h3>
+                    <p className="portfolio__description">
+                      Rick and Morty API consumption, with an interactive menu,
+                      and different presentations.
+                    </p>
+                    <a
+                      href="#"
+                      className="button button--flex button--small portfolio__button"
+                    >
+                      Demo
+                      <UilArrowRight className="button__icon" />
+                    </a>
                   </div>
-                </SwiperSlide>
+                </div>
+              </SwiperSlide>
 
-                <SwiperSlide>
-                  {/* Portfolio 2 */}
-                  <div className="portfolio__content grid swiper-slide">
-                    <img src={portfolio2} alt="" className="portfolio__img" />
+              <SwiperSlide>
+                {/* Portfolio 2 */}
+                <div className="portfolio__content grid swiper-slide">
+                  <img src={portfolio2} alt="" className="portfolio__img" />
 
-                    <div className="portfolio__data">
-                      <h3 className="portfolio__title">Calculator</h3>
-                      <p className="portfolio__description">
-                        calculator made in react.
-                      </p>
-                      <a
-                        href="#"
-                        className="button button--flex button--small portfolio__button"
-                      >
-                        Demo
-                        <UilArrowRight className="button__icon" />
-                      </a>
-                    </div>
+                  <div className="portfolio__data">
+                    <h3 className="portfolio__title">Calculator</h3>
+                    <p className="portfolio__description">
+                      calculator made in react.
+                    </p>
+                    <a
+                      href="#"
+                      className="button button--flex button--small portfolio__button"
+                    >
+                      Demo
+                      <UilArrowRight className="button__icon" />
+                    </a>
                   </div>
-                </SwiperSlide>
+                </div>
+              </SwiperSlide>
 
-                <SwiperSlide>
-                  {/* Portfolio 3 */}
-                  <div className="portfolio__content grid swiper-slide">
-                    <img src={portfolio3} alt="" className="portfolio__img" />
+              <SwiperSlide>
+                {/* Portfolio 3 */}
+                <div className="portfolio__content grid swiper-slide">
+                  <img src={portfolio3} alt="" className="portfolio__img" />
 
-                    <div className="portfolio__data">
-                      <h3 className="portfolio__title">Netflix</h3>
-                      <p className="portfolio__description">
-                        netflix simulation project.
-                      </p>
-                      <a
-                        href="#"
-                        className="button button--flex button--small portfolio__button"
-                      >
-                        Demo
-                        <UilArrowRight className="button__icon" />
-                      </a>
-                    </div>
+                  <div className="portfolio__data">
+                    <h3 className="portfolio__title">Netflix</h3>
+                    <p className="portfolio__description">
+                      netflix simulation project.
+                    </p>
+                    <a
+                      href="#"
+                      className="button button--flex button--small portfolio__button"
+                    >
+                      Demo
+                      <UilArrowRight className="button__icon" />
+                    </a>
                   </div>
-                </SwiperSlide>
-                <div className="">Parte en blanco, por que no supe como solucionarlo D:</div>
-              </Swiper>
-            </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </section>
 
@@ -861,16 +863,19 @@ const Main = (props) => {
               <div className="project__data">
                 <h2 className="project__title">You have a new project</h2>
                 <p className="project__description">Conctact me now</p>
-                <a href="#contact" className="button button--flex button--white">
+                <a
+                  href="#contact"
+                  className="button button--flex button--white"
+                >
                   Contact Me
-                  <UilMessage className="project__icon button__icon"/> 
+                  <UilMessage className="project__icon button__icon" />
                 </a>
               </div>
               <img src={imageDW} alt="" className="project__img" />
             </div>
           </div>
         </section>
-        
+
         {/* Contact Me */}
         <section className="contact section" id="contact">
           <h2 className="section__title">Contact Me</h2>
@@ -886,7 +891,7 @@ const Main = (props) => {
                   <span className="contact__subtitle">(+57) 301 353 3775</span>
                 </div>
               </div>
-              
+
               <div className="contact__information">
                 <UilEnvelopeHeart className="contact__icon" size="2rem" />
 
@@ -909,29 +914,43 @@ const Main = (props) => {
             <form action="" className="contact__form grid">
               <div className="contact__inputs grid">
                 <div className="contact__content">
-                  <label htmlFor="" className="contact__label">Name</label>
+                  <label htmlFor="" className="contact__label">
+                    Name
+                  </label>
                   <input type="text" className="contact__input" />
                 </div>
 
                 <div className="contact__content">
-                  <label htmlFor="" className="contact__label">Email</label>
+                  <label htmlFor="" className="contact__label">
+                    Email
+                  </label>
                   <input type="email" className="contact__input" />
                 </div>
               </div>
               <div className="contact__content">
-                <label htmlFor="" className="contact__label">Project</label>
+                <label htmlFor="" className="contact__label">
+                  Project
+                </label>
                 <input type="text" className="contact__input" />
               </div>
 
               <div className="contact__content">
-                <label htmlFor="" className="contact__label">Message</label>
-                <textarea name="" id="" cols="0" rows="7" className="contact__input"></textarea>
+                <label htmlFor="" className="contact__label">
+                  Message
+                </label>
+                <textarea
+                  name=""
+                  id=""
+                  cols="0"
+                  rows="7"
+                  className="contact__input"
+                ></textarea>
               </div>
 
               <div>
                 <a href="" className="button button--flex">
                   Send Message
-                  <UilMessage className="button__icon"/>
+                  <UilMessage className="button__icon" />
                 </a>
               </div>
             </form>
