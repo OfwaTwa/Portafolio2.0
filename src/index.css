@@ -748,7 +748,7 @@ img {
 .portfolio__img{
   width: 265px;
   border-radius: .5rem;
-  justify-self: center;
+  justify-self: center !important;
 }
 
 .portfolio__title{
@@ -1047,7 +1047,7 @@ img {
   .project__container,
   .contact__container,
   .footer__container{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 
   .qualification__sections{
