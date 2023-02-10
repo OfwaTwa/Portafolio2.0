@@ -140,15 +140,15 @@ const Main = (props) => {
                   quality work.{" "}
                 </p>
                 <a href="#contact" className="button button--flex">
-                  Contact Me <UilMessage size="1rem" className="button__icon" />
+                  Contact Me <UilMessage className="button__icon" />
                 </a>
               </div>
             </div>
             <div className="home__scroll">
               <a href="#about" className="home__scroll-button button--flex">
-                <UilMouseAlt size="2rem" className="home__scroll-mouse" />
+                <UilMouseAlt className="home__scroll-mouse" />
                 <span className="home__scroll-name">Scroll down</span>
-                <UilArrowDown size="1.25rem" className="home__scroll-arrow" />
+                <UilArrowDown className="home__scroll-arrow" />
               </a>
             </div>
           </div>
@@ -885,7 +885,7 @@ const Main = (props) => {
           <div className="contact__container container grid">
             <div className="">
               <div className="contact__information">
-                <UilPhone className="contact__icon" size="2rem" />
+                <UilPhone className="contact__icon" />
 
                 <div>
                   <h3 className="contact__title">Call Me</h3>
@@ -894,7 +894,7 @@ const Main = (props) => {
               </div>
 
               <div className="contact__information">
-                <UilEnvelopeHeart className="contact__icon" size="2rem" />
+                <UilEnvelopeHeart className="contact__icon" />
 
                 <div>
                   <h3 className="contact__title">Email</h3>
@@ -903,7 +903,7 @@ const Main = (props) => {
               </div>
 
               <div className="contact__information">
-                <UilMapMarker className="contact__icon" size="2rem" />
+                <UilMapMarker className="contact__icon" />
 
                 <div>
                   <h3 className="contact__title">Location</h3>

@@ -23,7 +23,7 @@ export const Scroll = (props) => {
     return(
         <div>
             <a href="#" className={`scrollup ${scrollPosition >= 558 ? "show-scroll" : null }`} id='scroll-up'>
-                <UilAngleUp size="1.5rem" className="scrollup__icon"/>
+                <UilAngleUp className="scrollup__icon"/>
             </a>
         </div>
     )
