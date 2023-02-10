@@ -781,78 +781,79 @@ const Main = (props) => {
           <span className="section__subtitle">Most recent work</span>
 
           <div className="portfolio__container container swiper-container">
-            <Swiper
-              // install Swiper modules
-              modules={[Navigation, Pagination, Scrollbar]}
-              slidesPerView={1}
-              navigation
-              pagination={{ clickable: true }}
-              className="swiper-wrapper"
-            >
-              <SwiperSlide>
-                {/* Portfolio 1 */}
-                <div className="portfolio__content grid swiper-slide">
-                  <img src={portfolio1} alt="" className="portfolio__img" />
+            <div>
+              <Swiper
+                // install Swiper modules
+                modules={[Navigation, Pagination, Scrollbar]}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true }}
+              >
+                <SwiperSlide>
+                  {/* Portfolio 1 */}
+                  <div className="portfolio__content grid">
+                    <img src={portfolio1} alt="" className="portfolio__img" />
 
-                  <div className="portfolio__data">
-                    <h3 className="portfolio__title">Rick & Morty API</h3>
-                    <p className="portfolio__description">
-                      Rick and Morty API consumption, with an interactive menu,
-                      and different presentations.
-                    </p>
-                    <a
-                      href="#"
-                      className="button button--flex button--small portfolio__button"
-                    >
-                      Demo
-                      <UilArrowRight className="button__icon" />
-                    </a>
+                    <div className="portfolio__data">
+                      <h3 className="portfolio__title">Rick & Morty API</h3>
+                      <p className="portfolio__description">
+                        Rick and Morty API consumption, with an interactive
+                        menu, and different presentations.
+                      </p>
+                      <a
+                        href="#"
+                        className="button button--flex button--small portfolio__button"
+                      >
+                        Demo
+                        <UilArrowRight className="button__icon" />
+                      </a>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
+                </SwiperSlide>
 
-              <SwiperSlide>
-                {/* Portfolio 2 */}
-                <div className="portfolio__content grid swiper-slide">
-                  <img src={portfolio2} alt="" className="portfolio__img" />
+                <SwiperSlide>
+                  {/* Portfolio 2 */}
+                  <div className="portfolio__content grid">
+                    <img src={portfolio2} alt="" className="portfolio__img" />
 
-                  <div className="portfolio__data">
-                    <h3 className="portfolio__title">Calculator</h3>
-                    <p className="portfolio__description">
-                      calculator made in react.
-                    </p>
-                    <a
-                      href="#"
-                      className="button button--flex button--small portfolio__button"
-                    >
-                      Demo
-                      <UilArrowRight className="button__icon" />
-                    </a>
+                    <div className="portfolio__data">
+                      <h3 className="portfolio__title">Calculator</h3>
+                      <p className="portfolio__description">
+                        calculator made in react.
+                      </p>
+                      <a
+                        href="#"
+                        className="button button--flex button--small portfolio__button"
+                      >
+                        Demo
+                        <UilArrowRight className="button__icon" />
+                      </a>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
+                </SwiperSlide>
 
-              <SwiperSlide>
-                {/* Portfolio 3 */}
-                <div className="portfolio__content grid swiper-slide">
-                  <img src={portfolio3} alt="" className="portfolio__img" />
+                <SwiperSlide>
+                  {/* Portfolio 3 */}
+                  <div className="portfolio__content grid">
+                    <img src={portfolio3} alt="" className="portfolio__img" />
 
-                  <div className="portfolio__data">
-                    <h3 className="portfolio__title">Netflix</h3>
-                    <p className="portfolio__description">
-                      netflix simulation project.
-                    </p>
-                    <a
-                      href="#"
-                      className="button button--flex button--small portfolio__button"
-                    >
-                      Demo
-                      <UilArrowRight className="button__icon" />
-                    </a>
+                    <div className="portfolio__data">
+                      <h3 className="portfolio__title">Netflix</h3>
+                      <p className="portfolio__description">
+                        netflix simulation project.
+                      </p>
+                      <a
+                        href="#"
+                        className="button button--flex button--small portfolio__button"
+                      >
+                        Demo
+                        <UilArrowRight className="button__icon" />
+                      </a>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            </Swiper>
+                </SwiperSlide>
+              </Swiper>
+            </div>
           </div>
         </section>
 
