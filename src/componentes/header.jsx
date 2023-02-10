@@ -63,32 +63,32 @@ const Header = (props) => {
             <ul className="nav__list grid">
               <li className="nav__item" onClick={()=> {openMenu()} } >
                 <a href="#home" className={`nav__link ${scrollPosition === 0 ? "active-link" : null}`} >
-                  <UilEstate size="1.2rem" /> Home
+                  <UilEstate size="1.2rem" className="nav__icon" /> Home
                 </a>
               </li>
               <li className="nav__item" onClick={()=> {openMenu()} } >
                 <a href="#about" className={`nav__link ${scrollPosition === 558 ? "active-link" : null}`} >
-                  <UilUserCircle size="1.2rem" /> About
+                  <UilUserCircle size="1.2rem" className="nav__icon" /> About
                 </a>
               </li>
               <li className="nav__item" onClick={()=> {openMenu()} } >
                 <a href="#skills" className={`nav__link ${scrollPosition === 1163 ? "active-link" : null}`} >
-                  <UilFileEditAlt size="1.2rem" /> Skills
+                  <UilFileEditAlt size="1.2rem" className="nav__icon" /> Skills
                 </a>
               </li>
               <li className="nav__item" onClick={()=> {openMenu()} } >
                 <a href="#services" className={`nav__link ${scrollPosition === 2303 ? "active-link" : null}`} >
-                  <UilSuitcaseAlt size="1.2rem" /> Services
+                  <UilSuitcaseAlt size="1.2rem" className="nav__icon" /> Services
                 </a>
               </li>
               <li className="nav__item" onClick={()=> {openMenu()} } >
                 <a href="#portfolio" className={`nav__link ${scrollPosition === 2948 ? "active-link" : null}`} >
-                  <UilScenery size="1.2rem" /> Portfolio
+                  <UilScenery size="1.2rem" className="nav__icon" /> Portfolio
                 </a>
               </li>
               <li className="nav__item" onClick={()=> {openMenu()} } >
                 <a href="#contact" className={`nav__link ${scrollPosition === 4042 ? "active-link" : null}`} >
-                  <UilMessage size="1.2rem" /> Contacme
+                  <UilMessage size="1.2rem" className="nav__icon" /> Contacme
                 </a>
               </li>
             </ul>

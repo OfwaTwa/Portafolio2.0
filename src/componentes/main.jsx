@@ -287,7 +287,7 @@ const Main = (props) => {
                 >
                   <UilServer className="skills__icon" />
                   <div>
-                    <h1 className="skills__titles">Frontend developer</h1>
+                    <h1 className="skills__titles">Backend developer</h1>
                     <span className="skills__subtitle">More than 4 years</span>
                   </div>
                   <UilAngleDown className="skills__arrow" />
