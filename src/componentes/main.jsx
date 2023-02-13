@@ -781,7 +781,7 @@ const Main = (props) => {
           <span className="section__subtitle">Most recent work</span>
 
           <div className="portfolio__container container swiper-container">
-            <div>
+            <div className="swiper-wrapper">
               <Swiper
                 // install Swiper modules
                 modules={[Navigation, Pagination, Scrollbar]}
@@ -854,6 +854,7 @@ const Main = (props) => {
                 </SwiperSlide>
               </Swiper>
             </div>
+            <div className=""> . </div>
           </div>
         </section>
 
