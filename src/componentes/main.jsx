@@ -3,8 +3,8 @@ import { useState } from "react";
 import download from "../archivos/Curriculum.pdf";
 import "../index.css";
 //Imagen de perfil
-import icon from "../imagenes/image.png";
-import image from "../imagenes/power.webp";
+import icon from "../imagenes/image.jpg";
+import image from "../imagenes/about.jpg";
 //Iconos
 import {
   UilLinkedin,
@@ -44,7 +44,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 //import image desarrollo web
-import imageDW from "../imagenes/desarrollo-web.png";
+import imageDW from "../imagenes/desarrollo-web.jpg";
 
 const Main = (props) => {
   // Skills
@@ -133,7 +133,7 @@ const Main = (props) => {
               </div>
 
               <div className="home__data">
-                <h1 className="home__tittle">Hi, I'm Ofwa Twa</h1>
+                <h1 className="home__tittle">I'm Ofwa Twa</h1>
                 <h3 className="home__subtitle">Frontend Developer</h3>
                 <p className="home__description">
                   High level experience in web desing and knowledge, producing
@@ -164,28 +164,31 @@ const Main = (props) => {
 
             <div className="about__data">
               <p className="about__description">
-                Web developer, with expensive knowledge and years of experience,
-                working in web technologies and Ui / Ux design, delivering
-                quality work.{" "}
+                I am a web developer highly skilled in creating dynamic and
+                engaging websites. I have experience in programming languages
+                such as HTML, CSS, JavaScript and PHP, and in the use of the
+                React tool. I am passionate about technology. <br /> I am always
+                looking for ways to improve my skill and knowledge in the field
+                of web development.
               </p>
 
               <div className="about__info">
                 <div>
-                  <span className="about__info-title">08+</span>
+                  <span className="about__info-title">01+</span>
                   <span className="about__info-name">
                     Years <br /> experience{" "}
                   </span>
                 </div>
 
                 <div>
-                  <span className="about__info-title">+20</span>
+                  <span className="about__info-title">+6</span>
                   <span className="about__info-name">
                     Completed <br /> project{" "}
                   </span>
                 </div>
 
                 <div>
-                  <span className="about__info-title">05+</span>
+                  <span className="about__info-title">01+</span>
                   <span className="about__info-name">
                     Companies <br /> worked{" "}
                   </span>
@@ -444,8 +447,8 @@ const Main = (props) => {
                       Udenar - University
                     </span>
                     <div className="qualification__calendar">
-                      <UilSchedule />
-                      2009 - 2014
+                      <UilSchedule className="qualification__icon" />
+                      {" "} 2009 - 2014
                     </div>
                   </div>
 
@@ -465,13 +468,13 @@ const Main = (props) => {
                   </div>
 
                   <div>
-                    <h3 className="qualification__title">Web Desing</h3>
+                    <h3 className="qualification__title">Bootcamp Henry</h3>
                     <span className="qualification__subtitle">
-                      Spain - University
+                      Argentina - Bootcamp
                     </span>
                     <div className="qualification__calendar">
-                      <UilSchedule />
-                      2014 - 2017
+                      <UilSchedule className="qualification__icon" />
+                      {" "} 2014 - 2017
                     </div>
                   </div>
                 </div>
@@ -479,13 +482,13 @@ const Main = (props) => {
                 {/* Qualification 3 */}
                 <div className="qualification__data">
                   <div>
-                    <h3 className="qualification__title">Web development</h3>
+                    <h3 className="qualification__title">Frontend</h3>
                     <span className="qualification__subtitle">
-                      Colombian - Institute
+                      Udemy - Courses
                     </span>
                     <div className="qualification__calendar">
-                      <UilSchedule />
-                      2017 - 2019
+                      <UilSchedule className="qualification__icon" />
+                      {" "} 2017 - 2019
                     </div>
                   </div>
 
@@ -507,11 +510,11 @@ const Main = (props) => {
                   <div>
                     <h3 className="qualification__title">Master in Ui/Ux</h3>
                     <span className="qualification__subtitle">
-                      Colombian - Institute
+                      Platzi - Courses
                     </span>
                     <div className="qualification__calendar">
-                      <UilSchedule />
-                      2019 - 2021
+                      <UilSchedule className="qualification__icon" />
+                      {" "} 2019 - 2021
                     </div>
                   </div>
                 </div>
@@ -527,59 +530,18 @@ const Main = (props) => {
                 {/* Qualification 1 */}
                 <div className="qualification__data">
                   <div>
-                    <h3 className="qualification__title">Software Enginner</h3>
+                    <h3 className="qualification__title">Web Designer</h3>
                     <span className="qualification__subtitle">
-                      Microsft - Colombian
+                      Inventas-App - Colombian
                     </span>
                     <div className="qualification__calendar">
-                      <UilSchedule />
-                      2016 - 2018
+                      <UilSchedule className="qualification__icon" />
+                      {" "} 2021 - 2023
                     </div>
                   </div>
 
                   <div>
                     <span className="qualification__rounder"></span>
-                    <span className="qualification__line"></span>
-                  </div>
-                </div>
-
-                {/* Qualification 2 */}
-                <div className="qualification__data">
-                  <div></div>
-
-                  <div>
-                    <span className="qualification__rounder"></span>
-                    <span className="qualification__line"></span>
-                  </div>
-
-                  <div>
-                    <h3 className="qualification__title">Frontend developer</h3>
-                    <span className="qualification__subtitle">
-                      Apple Inc - Spain
-                    </span>
-                    <div className="qualification__calendar">
-                      <UilSchedule />
-                      2018 - 2020
-                    </div>
-                  </div>
-                </div>
-
-                {/* Qualification 3 */}
-                <div className="qualification__data">
-                  <div>
-                    <h3 className="qualification__title">Ui Designer</h3>
-                    <span className="qualification__subtitle">
-                      Figma - Spain
-                    </span>
-                    <div className="qualification__calendar">
-                      <UilSchedule />
-                      2017 - 2019
-                    </div>
-                  </div>
-
-                  <div>
-                    <span className="qualification__rounder"></span>
-                    {/* <span className="qualification__line"></span> */}
                   </div>
                 </div>
               </div>
@@ -854,7 +816,6 @@ const Main = (props) => {
                 </SwiperSlide>
               </Swiper>
             </div>
-            <div className=""> . </div>
           </div>
         </section>
 

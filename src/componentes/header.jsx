@@ -51,12 +51,14 @@ const Header = (props) => {
     }
   }
 
+  console.log(scrollPosition);
+
   return (
     <div className="" >
       <header className={`header ${scrollPosition >= 80 ? "scroll-header" : null}`} id="header">
         <nav className="nav container">
           <a href="#" className="nav__logo">
-            Logo
+            Software Developer
           </a>
 
           <div className={`nav__menu ${ open ? `show-menu` : null }`} id="nav-menu">
@@ -67,28 +69,28 @@ const Header = (props) => {
                 </a>
               </li>
               <li className="nav__item" onClick={()=> {openMenu()} } >
-                <a href="#about" className={`nav__link ${scrollPosition === 558 ? "active-link" : null}`} >
+                <a href="#about" className={`nav__link ${scrollPosition === 662 ? "active-link" : null}`} >
                   <UilUserCircle className="nav__icon" /> About
                 </a>
               </li>
               <li className="nav__item" onClick={()=> {openMenu()} } >
-                <a href="#skills" className={`nav__link ${scrollPosition === 1163 ? "active-link" : null}`} >
+                <a href="#skills" className={`nav__link ${scrollPosition === 1244 ? "active-link" : null}`} >
                   <UilFileEditAlt className="nav__icon" /> Skills
                 </a>
               </li>
               <li className="nav__item" onClick={()=> {openMenu()} } >
-                <a href="#services" className={`nav__link ${scrollPosition === 2303 ? "active-link" : null}`} >
+                <a href="#services" className={`nav__link ${scrollPosition === 2438 ? "active-link" : null}`} >
                   <UilSuitcaseAlt className="nav__icon" /> Services
                 </a>
               </li>
               <li className="nav__item" onClick={()=> {openMenu()} } >
-                <a href="#portfolio" className={`nav__link ${scrollPosition === 2948 ? "active-link" : null}`} >
+                <a href="#portfolio" className={`nav__link ${scrollPosition === 2983 ? "active-link" : null}`} >
                   <UilScenery className="nav__icon" /> Portfolio
                 </a>
               </li>
               <li className="nav__item" onClick={()=> {openMenu()} } >
-                <a href="#contact" className={`nav__link ${scrollPosition === 4042 ? "active-link" : null}`} >
-                  <UilMessage className="nav__icon" /> Contacme
+                <a href="#contact" className={`nav__link ${scrollPosition === 3916 ? "active-link" : null}`} >
+                  <UilMessage className="nav__icon" /> Contact
                 </a>
               </li>
             </ul>

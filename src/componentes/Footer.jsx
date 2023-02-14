@@ -5,7 +5,7 @@ import "../index.css";
 import {
     UilFacebook,
     UilTwitter,
-    UilInstagramAlt
+    UilInstagram
   } from "@iconscout/react-unicons";
 
 export const Footer = (props) => {
@@ -39,12 +39,12 @@ export const Footer = (props) => {
           </ul>
 
           <div className="footer__socials">
-            <a href="" target="_blank" className="footer__social">
+            <a href="https://www.facebook.com/ofwa.twa.7/" target="_blank" className="footer__social">
               <UilFacebook />
             </a>
 
-            <a href="" target="_blank" className="footer__social">
-              <UilInstagramAlt />
+            <a href="https://www.instagram.com/ofwa_twa/" target="_blank" className="footer__social">
+              <UilInstagram />
             </a>
 
             <a href="" target="_blank" className="footer__social">
@@ -53,7 +53,7 @@ export const Footer = (props) => {
           </div>
         </div>
 
-        <p className="footer__copy" >&#169; uwu </p>
+        <p className="footer__copy" >&#169; Full Stack </p>
       </div>
     </footer>
   );
