@@ -236,40 +236,28 @@ const Main = (props) => {
                   <div className="skills__data">
                     <div className="skills__titles">
                       <h3 className="skills__name">HTML</h3>
-                      <span className="skills__number">90%</span>
-                    </div>
-                    <div className="skills__bar">
-                      <span className="skills__percentage skills__html"></span>
+                      
                     </div>
                   </div>
 
                   <div className="skills__data">
                     <div className="skills__titles">
                       <h3 className="skills__name">CSS</h3>
-                      <span className="skills__number">40%</span>
-                    </div>
-                    <div className="skills__bar">
-                      <span className="skills__percentage skills__css"></span>
+
                     </div>
                   </div>
 
                   <div className="skills__data">
                     <div className="skills__titles">
                       <h3 className="skills__name">JavaScript</h3>
-                      <span className="skills__number">30%</span>
-                    </div>
-                    <div className="skills__bar">
-                      <span className="skills__percentage skills__js"></span>
+                      
                     </div>
                   </div>
 
                   <div className="skills__data">
                     <div className="skills__titles">
                       <h3 className="skills__name">React</h3>
-                      <span className="skills__number">20%</span>
-                    </div>
-                    <div className="skills__bar">
-                      <span className="skills__percentage skills__react"></span>
+                      
                     </div>
                   </div>
                 </div>
@@ -300,40 +288,28 @@ const Main = (props) => {
                   <div className="skills__data">
                     <div className="skills__titles">
                       <h3 className="skills__name">PHP</h3>
-                      <span className="skills__number">80%</span>
-                    </div>
-                    <div className="skills__bar">
-                      <span className="skills__percentage skills__php"></span>
+                      
                     </div>
                   </div>
 
                   <div className="skills__data">
                     <div className="skills__titles">
                       <h3 className="skills__name">Node Js</h3>
-                      <span className="skills__number">60%</span>
-                    </div>
-                    <div className="skills__bar">
-                      <span className="skills__percentage skills__node"></span>
+                      
                     </div>
                   </div>
 
                   <div className="skills__data">
                     <div className="skills__titles">
                       <h3 className="skills__name">Firebase</h3>
-                      <span className="skills__number">80%</span>
-                    </div>
-                    <div className="skills__bar">
-                      <span className="skills__percentage skills__firebase"></span>
+                      
                     </div>
                   </div>
 
                   <div className="skills__data">
                     <div className="skills__titles">
                       <h3 className="skills__name">Python</h3>
-                      <span className="skills__number">85%</span>
-                    </div>
-                    <div className="skills__bar">
-                      <span className="skills__percentage skills__python"></span>
+
                     </div>
                   </div>
                 </div>
@@ -364,31 +340,12 @@ const Main = (props) => {
                   <div className="skills__data">
                     <div className="skills__titles">
                       <h3 className="skills__name">Figma</h3>
-                      <span className="skills__number">70%</span>
+                      
                     </div>
+                {/* Progress Bar
                     <div className="skills__bar">
                       <span className="skills__percentage skills__figma"></span>
-                    </div>
-                  </div>
-
-                  <div className="skills__data">
-                    <div className="skills__titles">
-                      <h3 className="skills__name">Sketch</h3>
-                      <span className="skills__number">54%</span>
-                    </div>
-                    <div className="skills__bar">
-                      <span className="skills__percentage skills__sketch"></span>
-                    </div>
-                  </div>
-
-                  <div className="skills__data">
-                    <div className="skills__titles">
-                      <h3 className="skills__name">Photoshop</h3>
-                      <span className="skills__number">32%</span>
-                    </div>
-                    <div className="skills__bar">
-                      <span className="skills__percentage skills__photoshop"></span>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
