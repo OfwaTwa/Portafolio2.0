@@ -542,6 +542,10 @@ img {
   transform: rotate(-180deg);
 }
 
+.skills__img{
+  width: 50%;
+}
+
 /*==================== QUALIFICATION ====================*/
 .qualification__tabs{
   display: flex;

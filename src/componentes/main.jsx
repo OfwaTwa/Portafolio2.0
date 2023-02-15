@@ -45,6 +45,17 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 //import image desarrollo web
 import imageDW from "../imagenes/desarrollo-web.jpg";
+//import iconos for skills
+import icon1 from "../imagenes/icons/html.png";
+import icon2 from "../imagenes/icons/css.png";
+import icon3 from "../imagenes/icons/js.png";
+import icon4 from "../imagenes/icons/react.png";
+import icon5 from "../imagenes/icons/java.png";
+import icon6 from "../imagenes/icons/php.png";
+import icon7 from "../imagenes/icons/sql.png";
+import icon8 from "../imagenes/icons/node-js.png";
+import icon9 from "../imagenes/icons/figma.png";
+
 
 const Main = (props) => {
   // Skills
@@ -227,7 +238,7 @@ const Main = (props) => {
                   <UilBracketsCurly className="skills__icon" />
                   <div>
                     <h1 className="skills__titles">Frontend developer</h1>
-                    <span className="skills__subtitle">More than 4 years</span>
+                    <span className="skills__subtitle">More than 2 years</span>
                   </div>
                   <UilAngleDown className="skills__arrow" />
                 </div>
@@ -235,29 +246,25 @@ const Main = (props) => {
                 <div className="skills__list grid">
                   <div className="skills__data">
                     <div className="skills__titles">
-                      <h3 className="skills__name">HTML</h3>
-                      
+                      <img src={icon1} alt="" className="skills__img" />
+                    </div>
+                  </div>
+
+                  <div className="skills__data">
+                    <div className="skills__titles ">
+                      <img src={icon2} alt="" className="skills__img" />
                     </div>
                   </div>
 
                   <div className="skills__data">
                     <div className="skills__titles">
-                      <h3 className="skills__name">CSS</h3>
-
+                      <img src={icon3} alt="" className="skills__img" />
                     </div>
                   </div>
 
                   <div className="skills__data">
                     <div className="skills__titles">
-                      <h3 className="skills__name">JavaScript</h3>
-                      
-                    </div>
-                  </div>
-
-                  <div className="skills__data">
-                    <div className="skills__titles">
-                      <h3 className="skills__name">React</h3>
-                      
+                      <img src={icon4} alt="" className="skills__img" />
                     </div>
                   </div>
                 </div>
@@ -279,7 +286,7 @@ const Main = (props) => {
                   <UilServer className="skills__icon" />
                   <div>
                     <h1 className="skills__titles">Backend developer</h1>
-                    <span className="skills__subtitle">More than 4 years</span>
+                    <span className="skills__subtitle">More than 1 years</span>
                   </div>
                   <UilAngleDown className="skills__arrow" />
                 </div>
@@ -287,29 +294,25 @@ const Main = (props) => {
                 <div className="skills__list grid">
                   <div className="skills__data">
                     <div className="skills__titles">
-                      <h3 className="skills__name">PHP</h3>
-                      
+                      <img src={icon5} alt="" className="skills__img" />
                     </div>
                   </div>
 
                   <div className="skills__data">
                     <div className="skills__titles">
-                      <h3 className="skills__name">Node Js</h3>
-                      
+                    <img src={icon6} alt="" className="skills__img" />
                     </div>
                   </div>
 
                   <div className="skills__data">
                     <div className="skills__titles">
-                      <h3 className="skills__name">Firebase</h3>
-                      
+                    <img src={icon8} alt="" className="skills__img" />
                     </div>
                   </div>
 
                   <div className="skills__data">
                     <div className="skills__titles">
-                      <h3 className="skills__name">Python</h3>
-
+                    <img src={icon7} alt="" className="skills__img" />
                     </div>
                   </div>
                 </div>
@@ -331,7 +334,7 @@ const Main = (props) => {
                   <UilSwatchbook className="skills__icon" />
                   <div>
                     <h1 className="skills__titles">Designer</h1>
-                    <span className="skil ls__subtitle">More than 3 years</span>
+                    <span className="skills__subtitle">More than 1 years</span>
                   </div>
                   <UilAngleDown className="skills__arrow" />
                 </div>
@@ -339,10 +342,9 @@ const Main = (props) => {
                 <div className="skills__list grid">
                   <div className="skills__data">
                     <div className="skills__titles">
-                      <h3 className="skills__name">Figma</h3>
-                      
+                      <img src={icon9} alt="" className="skills__img" />
                     </div>
-                {/* Progress Bar
+                    {/* Progress Bar
                     <div className="skills__bar">
                       <span className="skills__percentage skills__figma"></span>
                     </div> */}
@@ -404,8 +406,8 @@ const Main = (props) => {
                       Udenar - University
                     </span>
                     <div className="qualification__calendar">
-                      <UilSchedule className="qualification__icon" />
-                      {" "} 2009 - 2014
+                      <UilSchedule className="qualification__icon" /> 2009 -
+                      2014
                     </div>
                   </div>
 
@@ -430,8 +432,8 @@ const Main = (props) => {
                       Argentina - Bootcamp
                     </span>
                     <div className="qualification__calendar">
-                      <UilSchedule className="qualification__icon" />
-                      {" "} 2014 - 2017
+                      <UilSchedule className="qualification__icon" /> 2014 -
+                      2017
                     </div>
                   </div>
                 </div>
@@ -444,8 +446,8 @@ const Main = (props) => {
                       Udemy - Courses
                     </span>
                     <div className="qualification__calendar">
-                      <UilSchedule className="qualification__icon" />
-                      {" "} 2017 - 2019
+                      <UilSchedule className="qualification__icon" /> 2017 -
+                      2019
                     </div>
                   </div>
 
@@ -470,8 +472,8 @@ const Main = (props) => {
                       Platzi - Courses
                     </span>
                     <div className="qualification__calendar">
-                      <UilSchedule className="qualification__icon" />
-                      {" "} 2019 - 2021
+                      <UilSchedule className="qualification__icon" /> 2019 -
+                      2021
                     </div>
                   </div>
                 </div>
@@ -492,8 +494,8 @@ const Main = (props) => {
                       Inventas-App - Colombian
                     </span>
                     <div className="qualification__calendar">
-                      <UilSchedule className="qualification__icon" />
-                      {" "} 2021 - 2023
+                      <UilSchedule className="qualification__icon" /> 2021 -
+                      2023
                     </div>
                   </div>
 
