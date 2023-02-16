@@ -1,0 +1,10 @@
+.image__container{
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    z-index: 9999;
+}
+
+.image__icon{
+    width: 50px;
+}
