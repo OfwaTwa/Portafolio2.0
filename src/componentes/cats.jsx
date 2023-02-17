@@ -17,12 +17,14 @@ const Cats = (props) => {
   }
 
   return (
-    <>
+    <div>
       <div className="image__container">
         <img src={iconCat} alt=" " className="image__icon" onClick={()=>{onClick()}}/>
       </div>
-      <img src={imageUmi} className={`image__Umi ${open ? "image__Umi-open" : null}`} />
-    </>
+      <div className={`container__cat ${open? "container__cat-active" : null }`} >
+        <img src={imageUmi} className="image__Umi" />
+      </div>
+    </div>
   );
 };
 
