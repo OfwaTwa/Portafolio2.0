@@ -1,6 +1,7 @@
 import React from "react";
 import "../index.css";
 import { useState, useEffect } from "react";
+
 import {
   UilApps,
   UilTimes,
@@ -14,7 +15,7 @@ import {
   UilSun
 } from "@iconscout/react-unicons";
 
-const Header = (props) => {
+export const Cabecera = () => {
   const [ open, setOpen ] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [ active, setActive ] = useState(false);
@@ -110,5 +111,3 @@ const Header = (props) => {
     </div>
   );
 };
-
-export default Header;
