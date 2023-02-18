@@ -9,7 +9,6 @@ import image from "../imagenes/about.jpg";
 import {
   UilLinkedin,
   UilGithub,
-  UilLinkBroken,
   UilMessage,
   UilMouseAlt,
   UilArrowDown,
@@ -30,6 +29,7 @@ import {
   UilPhone,
   UilEnvelopeHeart,
   UilMapMarker,
+  UilWhatsapp,
 } from "@iconscout/react-unicons";
 //imagenes del portafolio
 import portfolio1 from "../imagenes/portfolio1.png";
@@ -134,8 +134,8 @@ export const Principal = (props) => {
                 <a href="https://github.com/OfwaTwa" target="_blank">
                   <UilGithub className="home__social-icon" />
                 </a>
-                <a href="" target="_blank">
-                  <UilLinkBroken className="home__social-icon" />
+                <a href="https://wa.me/573013533775" target="_blank">
+                  <UilWhatsapp className="home__social-icon" />
                 </a>
               </div>
 
