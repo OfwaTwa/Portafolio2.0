@@ -1,6 +1,6 @@
 import "./App.css";
 import { Cabecera } from "./componentes/Cabecera.jsx";
-import Main from "./componentes/Main.jsx";
+import { Main } from "./componentes/Main.jsx";
 import { Footer } from "./componentes/Footer.jsx";
 import { Scroll } from "./componentes/Scroll.jsx";
 import Cats from "./componentes/cats";

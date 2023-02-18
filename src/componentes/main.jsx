@@ -57,7 +57,7 @@ import icon8 from "../imagenes/icons/node-js.png";
 import icon9 from "../imagenes/icons/figma.png";
 
 
-const Main = (props) => {
+export const Main = (props) => {
   // Skills
   const [open1, setOpen1] = useState(false);
   const [open2, setOpen2] = useState(false);
@@ -882,5 +882,3 @@ const Main = (props) => {
     </>
   );
 };
-
-export default Main;
