@@ -14,14 +14,18 @@
     --first-color-second: hsl(var(--hue-color), 69%, 61%);
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    --first-color-header: #EEE7F5;
+    --first-color-footer: hsl(331, 66%, 88%);
     --title-color: hsl(var(--hue-color), 8%, 15%);
     --text-color: hsl(var(--hue-color), 8%, 45%);
     --text-color-light: hsl(var(--hue-color), 8%, 65%);
     --input-color: hsl(var(--hue-color), 70%, 96%);
-    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --body-color: hsl(252, 36%, 95%);
     --container-color: #fff;
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+    --icon-color: hsl(254, 74%, 33%);
+    --icon2-color: hsl(190, 94%, 49%);
 
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
@@ -71,17 +75,22 @@
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
-  --first-color-second: hsl(var(--hue-color), 30%, 8%);
+  --first-color: hsl(261, 40%, 32%);    
+  --first-color-second: hsl(262, 39%, 14%);
+  --first-color-alt: hsl(257, 58%, 70%);
   --title-color: hsl(var(--hue-color), 8%, 95%);
   --text-color: hsl(var(--hue-color), 8%, 75%);
-  --input-color: hsl(var(--hue-color), 29%, 16%);
-  --body-color: hsl(var(--hue-color), 100%, 6%);
-  --container-color: hsl(var(--hue-color), 29%, 16%);
-  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+  --input-color: hsl(238, 13%, 48%);
+  --body-color: hsl(282, 42%, 12%);
+  --container-color: hsl(238, 13%, 48%);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);  
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+  --first-color-header: hsl(262, 39%, 14%);
+  --icon-color: hsl(46, 75%, 45%);
+  --icon2-color: hsl(67, 96%, 50%);
 }
 
-/*========== Button Dark/Light ==========*/
+/*========== Button Dark/Light ==========*/ 
 .nav__btns{
   display: flex;
   align-items: center;
@@ -89,13 +98,13 @@ body.dark-theme{
 
 .change-theme{
   font-size: 1.25rem;
-  color: var(--title-color);
+  color: var(--icon-color);
   margin-right: var(--mb-1);
   cursor: pointer;
 }
 
 .change-theme:hover{
-  color: var(--first-color);
+  color: var(--icon2-color);
 }
 
 /*==================== BASE ====================*/
@@ -171,10 +180,10 @@ img {
 .header {
   width: 100%;
   position: fixed;
-  bottom: 0;
+  bottom: 0;      
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--body-color);
+  background-color: var(--first-color-header); 
 }
 
 /*==================== NAV ====================*/
@@ -367,7 +376,7 @@ img {
   color:#fff;
   padding: 1rem;
   border-radius: .5rem;
-  font-weight: var(--font-medium);
+  font-weight: var(--font-medium);  
 }
 
 .button:hover{
@@ -410,6 +419,12 @@ img {
 
 .button--white:hover{
   background-color: #fff;
+}
+
+.button--send{
+  border-width: 0px;
+  font-size: 16px;
+  font-family: var(--body-font);
 }
 
 /*==================== ABOUT ====================*/
@@ -855,6 +870,7 @@ img {
   background-color: var(--input-color);
   border-radius: .5rem;
   padding: .75rem 1rem .25rem;
+  border: 1px solid black;
 }
 
 .contact__label{
@@ -871,6 +887,7 @@ img {
   border: none;
   outline: none;
   padding: .25rem .5rem .5rem 0;
+  resize: none;
 }
 
 /*==================== FOOTER ====================*/
@@ -883,7 +900,7 @@ img {
 }
 
 .footer__bg{
-  background-color: var(--first-color-second);
+  background-color: var(--first-color-header);
   padding: 2rem 0 3rem;
 }
 
@@ -903,7 +920,7 @@ img {
 }
 
 .footer__link:hover{
-  color: var(--first-color-lighter);
+  color: var(--first-color-alt);
 }
 
 .footer__social{
@@ -914,7 +931,7 @@ img {
 }
 
 .footer__social:hover{
-  color: var(--first-color-lighter);
+  color: var(--first-color-alt);
 }
 
 .footer__copy{
@@ -926,9 +943,9 @@ img {
 
 .footer__title,
 .footer__subtitle,
-.footer__link,
+.footer__link,  
 .footer__social{
-  color: #fff;
+  color: var(--title-color);
 }
 
 /*========== SCROLL UP ==========*/
