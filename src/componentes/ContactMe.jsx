@@ -13,18 +13,19 @@ import {
 import Joi from "joi";
 
 const ContactMe = () => {
+    
   //Joi
   const [action, setAction] = useState("javascript:void(0);");
   const [formValues, setFormValues] = useState({
     name: "",
   });
   const nameValidation = Joi.object({
-    name: Joi.string().min(4).messages({
+    name: Joi.string().min(3).messages({
       "string.min": "Name's length must be at least 3 characters",
     }),
   });
   const formValidation = Joi.object({
-    name: Joi.string().min(4).messages({
+    name: Joi.string().min(3).messages({
       "string.min": "Name's length must be at least 3 characters",
     }),
   });
