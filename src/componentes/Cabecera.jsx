@@ -50,9 +50,7 @@ export const Cabecera = () => {
       document.body.className = props;
       setActive(true);
     }
-  }
-
-  console.log(scrollPosition);
+  } 
 
   return (
     <div className="" >
