@@ -44,7 +44,8 @@ const Portfolio = () => {
                       and different presentations.
                     </p>
                     <a
-                      href="#"
+                      href="https://api-rick-n-morty-app.netlify.app"
+                      target="_blank"
                       className="button button--flex button--small portfolio__button"
                     >
                       Demo
