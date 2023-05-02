@@ -13,6 +13,8 @@ import {
 } from "@iconscout/react-unicons";
 //import controler email
 import Joi from "joi";
+//import sweetalert
+import Swal from 'sweetalert2'
 
 const ContactMe = () => {
   //Joi
@@ -84,7 +86,12 @@ const ContactMe = () => {
     e.preventDefault();
     const { error: errorGeneral } = formValidation.validate(formValues);
     if (errorGeneral) {
-      console.log("error");
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong!',
+        footer: '<span>All fields are required</span>'
+      })
     } else {
       emailjs
         .send(
@@ -99,9 +106,20 @@ const ContactMe = () => {
         )
         .then((response) => {
           console.log("Correo enviado", response);
+          Swal.fire(
+            'Thank you!',
+            'Your message was sent!',
+            'success'
+          )
         })
         .catch((error) => {
           console.error("Error al enviar el correo", error);
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+            footer: '<a href="">Why do I have this issue?</a>'
+          })
         });
     }
   };
