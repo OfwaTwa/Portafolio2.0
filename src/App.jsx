@@ -10,6 +10,7 @@ import Services from "./componentes/Servicies";
 import Portfolio from "./componentes/Portfolio";
 import ProjectInMind from "./componentes/ProjectInMind";
 import ContactMe from "./componentes/ContactMe";
+import Cat from "./componentes/Cat";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Cabecera />
       <Home />
       <About />
+      <Cat />
       <Skills />
       <Qualification />
       <Services />

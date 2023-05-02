@@ -209,6 +209,8 @@ img {
 .nav__toggle{
   font-size: 1.1rem;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 
 .nav__toggle:hover{
@@ -1002,6 +1004,52 @@ img {
   background-color: var(--text-color-light);
 }
 
+/*========== Cats Style ==========*/
+.image__container{
+  position: fixed;
+  top: 1rem;
+  right: 2.5rem;
+  z-index: 9999;
+}
+
+.image__icon{
+  width: 40px;
+  opacity: 0.4;
+}
+
+.image__icon:hover{
+  opacity: 1;
+  width: 50px;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.container__cat{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s;
+}
+
+.container__cat-active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.image__Umi {
+  width: 70%;
+  border-radius: .5rem;
+}
+
 /*==================== MEDIA QUERIES ====================*/
 
 /* For small devices */
@@ -1263,6 +1311,10 @@ img {
   .footer__copy{
     margin-top: 4.5rem;
   }
+  .image__container{
+    top: 90vh;
+    bottom: 0px;
+  }
 }
 /* For large devices */
 
@@ -1313,6 +1365,11 @@ img {
   .contact___inputs{
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .image__container{
+    top: 90vh;
+    bottom: 0px;
+  }
 } 
 
 @media screen and (min-width: 1400px) {
@@ -1326,6 +1383,11 @@ img {
     zoom: 80%;
     width: 100%;
     height: 100%;
+  }
+
+  .image__container{
+    top: 70vh;
+    bottom: 0px;
   }
  
 }
