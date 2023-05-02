@@ -26,6 +26,7 @@
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
     --icon-color: hsl(254, 74%, 33%);
     --icon2-color: hsl(190, 94%, 49%);
+    --first-color-disabled: hsl(0, 0%, 59%);
 
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
@@ -381,6 +382,14 @@ img {
 
 .button:hover{
   background-color: var(--first-color-alt);
+}
+
+.button:disabled{
+  background-color: var(--first-color-disabled);
+}
+
+.button:hover:disabled{
+  background-color: var(--first-color-disabled);
 }
 
 .button__icon{
