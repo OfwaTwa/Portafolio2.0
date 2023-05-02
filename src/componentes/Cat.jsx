@@ -15,7 +15,7 @@ const Cat = () => {
   return (
     <div>
       <div className="image__container">
-        <span className="image__container"> Xd </span>
+        <span className="">Certified</span>
         <img src={iconCat} alt=" " className="image__icon" onClick={onClick} />
       </div>
       <div
