@@ -12,7 +12,7 @@ import {
   UilWhatsapp,
 } from "@iconscout/react-unicons";
 
-export const Home = (props) => {
+export const Home = () => {
   return (
     <main className="main">
       {/* Home */}

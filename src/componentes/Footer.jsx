@@ -8,7 +8,7 @@ import {
     UilInstagram
   } from "@iconscout/react-unicons";
 
-export const Footer = (props) => {
+export const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__bg">

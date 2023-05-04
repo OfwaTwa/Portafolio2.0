@@ -26,22 +26,12 @@ const Skills = () => {
   const [open3, setOpen3] = useState(false);
 
   const onClickSkills = (value) => {
-    if (value === "open1" && open1 === false) {
-      setOpen1(true);
-      setOpen2(false);
-      setOpen3(false);
-    } else if (value === "open2" && open2 === false) {
-      setOpen1(false);
-      setOpen2(true);
-      setOpen3(false);
-    } else if (value === "open3" && open3 === false) {
-      setOpen1(false);
-      setOpen2(false);
-      setOpen3(true);
+    if (value === "open1") {
+      setOpen1(!open1);
+    } else if (value === "open2") {
+      setOpen2(!open2);
     } else {
-      setOpen1(false);
-      setOpen2(false);
-      setOpen3(false);
+      setOpen3(!open3);
     }
   };
   return (
